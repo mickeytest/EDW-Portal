@@ -1,0 +1,66 @@
+{
+    "missSLA":{
+        "data": [
+            {
+                "name": "ZEO",
+                "y": 65,
+                "drilldown": "ZEO"
+            },
+            {
+                "name": "EMR",
+                "y": 65,
+                "drilldown": "EMR"
+            },
+            {
+                "name": "JAD",
+                "y": 65,
+                "drilldown": "JAD"
+            }
+        ],
+        "drilldown": [
+            {
+                "id": "ZEO",
+                "data": [
+                    [
+                        "R1",
+                        11
+                    ],
+                    [
+                        "R2",
+                        16
+                    ]
+                ]
+            },
+            {
+                "id": "EMR",
+                "data": [
+                    [
+                        "R3",
+                        11
+                    ],
+                    [
+                        "R4",
+                        16
+                    ],
+                    [
+                        "R2",
+                        15
+                    ]
+                ]
+            },
+            {
+                "id": "JAD",
+                "data": [
+                    [
+                        "R2",
+                        11
+                    ],
+                    [
+                        "R5",
+                        16
+                    ]
+                ]
+            }
+        ]
+    }
+}

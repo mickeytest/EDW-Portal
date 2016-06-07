@@ -1,0 +1,40 @@
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+<div id="page-wrapper" >
+  <div class="container-fluid">
+
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">
+                  EDW MSA Dashboard
+              </h1>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div>
+
+
+
+            
+<div >
+  <div style="height: 305px">
+    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+
+      <chart value='slide.chart' height="400" chartobj='chartObj'>
+                        </chart>
+
+        <div class="carousel-caption">
+          <h4>Slide {{slide.id}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</div>
+</div>

@@ -1,0 +1,52 @@
+
+<div id="page-wrapper" >
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">Rollup SLA Status   <a href = "{{baseURL}}/#/slametric" class="btn btn-default" role="button"><i class="fa fa-undo"></i></a></h1> 
+           
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div>
+
+      <div class="row">
+          <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup Miss SLA - MEC
+                        </h3>
+                    </div>
+                    <div  class="panel-body">               
+                        <chart value='mecmiss' height="400" chartobj='chartObj' >
+                         </chart>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup SLA Status Non-MEC
+                        </h3>
+                    </div>
+                    <div  class="panel-body">               
+                        <chart value='nonmecmiss' height="400" chartobj='chartObj' >
+                         </chart> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup SLA Status Total
+                        </h3>
+                    </div>
+                    <div  class="panel-body">               
+                        <chart value='totalmecmiss' height="400" chartobj='chartObj' >
+                         </chart> 
+                    </div>
+                </div>
+            </div>
+      </div>
+  </div>
+</div>

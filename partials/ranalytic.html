@@ -1,0 +1,171 @@
+
+<div id="page-wrapper" >
+  <div class="container-fluid">
+
+
+       <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">Rollup Error Analytic <!-- <small>Statistics Overview</small> --></h1>     
+           
+          </div>
+       </div>
+       <div class="row">&nbsp;</div>
+       <div class="row">
+          <div class="col-lg-12">
+          <div  class="ui form">
+            <div class="inline fields">
+              <label>Environment:</label>
+              <div class="field">
+                <div class="ui slider checkbox">
+                  <input  type="radio" name="env" value= "BER" ng-model="env">
+                  <label>ITG</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input  type="radio" name="env" value= "ZEO" ng-model="env">
+                  <label>ZEO</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input type="radio" name="env" value= "EMR" ng-model="env">
+                  <label>EMR</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input type="radio" name="env"  value= "JAD" ng-model="env">
+                  <label>JAD</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input type="radio" name="env"  value= "ALL" ng-model="env">
+                  <label>ALL PRO</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+       </div>
+
+<!--           <div class="row">
+            <div class="col-lg-6">
+             
+                
+                        <chart value='top1Chart' height="250" chartobj='chartObj'>
+                        </chart>
+    
+                </div>
+          
+             <div class="col-lg-6">
+                
+                        <chart value='runtimeChart' height="250" chartobj='chartObj'>
+                        </chart>
+                   
+                </div>
+            
+        </div> -->
+        <div class="row">&nbsp;</div>
+         <div class="row">
+            <div class="col-lg-12">
+              <div class="btn-group">
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Day'" >Day</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Week'" >Week</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Month'" >Month</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Year'" >Year</label>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">
+                        
+                        <chart value='top10Chart1' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">
+                        
+                        <chart value='top10Chart2' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+         <div class="row">
+            <div class="col-lg-12">
+              <div class="btn-group">
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Day'" >Day</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Week'" >Week</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Month'" >Month</label>
+                 <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'mecmonth'" >Mec Month</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Year'" >Year</label>
+              </div>
+            </div>
+        </div> 
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">                       
+                        <chart value='top3Chart' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="row">&nbsp;</div>
+         <div class="row">
+
+               <div class="col-lg-3" >
+                <label class="radio-inline">
+                  <input type="radio" value= "1"  ng-model="type" >
+                  Rollup Recovery           
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value= "2"  ng-model="type" >
+                   System Recover
+                </label>
+               </div>
+
+            <div class="col-lg-9">
+              <div class="btn-group">
+                <label class="btn btn-default" ng-model="radioModel2" uib-btn-radio="'Day'" >Day</label>
+                <label class="btn btn-default" ng-model="radioModel2" uib-btn-radio="'Week'" >Week</label>
+                <label class="btn btn-default" ng-model="radioModel2" uib-btn-radio="'Month'" >Month</label>
+                <label class="btn btn-default" ng-model="radioModel2" uib-btn-radio="'mecmonth'" >Mec Month</label>
+                <label class="btn btn-default" ng-model="radioModel2" uib-btn-radio="'Year'" >Year</label>
+              </div>
+            </div>
+        </div> 
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">                       
+                        <chart value='systemChart' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <!-- /.row -->
+	</div>	
+</div>

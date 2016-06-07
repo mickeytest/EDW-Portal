@@ -1,0 +1,14 @@
+{
+	"data":[
+		{"RollupDate":"2015-12-01",
+		"BatchID":"21998098",
+		"EventID":"11873.DP.989.1",
+		"CPFlag":"Yes",
+		"Duration":"200",
+		"Duration30DaysAverage":"140",
+		"RowsAffected":"12453242",
+		"RowsAffected7DaysAverage":"2898734",
+		"PercentageRollupTime":"15"
+		}
+	]
+}

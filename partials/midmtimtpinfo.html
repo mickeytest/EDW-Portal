@@ -1,0 +1,138 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">MIDs MTI/MTP Information <!-- <small>Statistics Overview</small> --></h1>   
+           
+          </div>
+       </div>
+       <div class="row">&nbsp;</div>
+
+        <div class="row">&nbsp;</div>
+        <div class="row" >
+        <div class="col-lg-12">
+        <h3><p class="text-info" ><b>Release Dates & Update:</b></p></h3>
+        <table class="ui celled structured table" >
+           
+          <!-- <table class="table table-bordered table-hover"  data-pagination="true"> -->
+             <thead>
+                <tr class="info center aligned" >
+                 <th class="col-lg-2 " >MTI/Volume testing/UAT</th>
+                 <th class="col-lg-2 " >Volume Testing/UAT</th>
+                 <th class="col-lg-2 " >Solution Source Logged</th>
+                 <th class="col-lg-2 " >Control Period/Benchmarking</th>
+                 <th class="col-lg-2 " >Artifacts Frozen, Release Locked</th>
+                 <th class="col-lg-2 " >MTP</th>
+
+                </tr>
+            </thead> 
+             <tbody> 
+                <tr class="center aligned" >
+                  <td >{{MTI}}</td>
+                  <td >{{UAT}}</td>
+                  <td >{{SSL}}</td>
+                  <td >{{ControlPeriod}}</td>
+                  <td >{{Frozen}}</td>
+                  <td >{{MTP}}</td>
+                </tr>
+           </tbody>    
+          </table>   
+
+        
+        </div>
+      </div>
+
+        <div class="row">&nbsp;</div> 
+                <h3><p class="text-info" ><b>Detailed MID MTI/MTP:</b></p></h3>
+
+        <!-- /.row -->
+        <div class="row" class="table-responsive">
+         <div class="col-lg-9 ">
+           <label>Items per page:</label>
+           <label class="checkbox-inline">
+              <input type="number" min="1" class="form-control" ng-model="pageSize">
+          </label>
+        
+         </div>  
+         <div class="col-lg-3 pull-right">
+           <label>Search:</label>
+            <label class="checkbox-inline">
+              <input id="query" class="form-control" ng-model="query" ng-change="change()">
+           </label>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div> 
+
+      <div class="row" >
+          <div class="col-lg-12">
+            <table class="table table-bordered table-hover"  >
+               <thead>
+                  <tr>                                  
+                   <th ng-click="sort('MID')">MID
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+
+                     <th ng-click="sort('EnvironmentITG')">Environment
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='EnvironmentITG'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+<!--                    <th ng-click="sort('ScriptVersion')">Script Version
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='ScriptVersion'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th> -->
+                     <th ng-click="sort('MTIDate')">MTI Date
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MTIDate'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('EnvironmentJAD')">Environment
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='EnvironmentJAD'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+<!--                    <th ng-click="sort('ScriptVersionJAD')">Script Version
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='ScriptVersionJAD'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th> -->
+
+                     <th ng-click="sort('MTPDateJAD')">MTP Date
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MTPDateJAD'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+
+                     <th ng-click="sort('EnvironmentZEO')">Environment
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='EnvironmentZEO'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+<!--                    <th ng-click="sort('ScriptVersionZEO')">Script Version
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='ScriptVersionZEO'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th> -->
+
+                     <th ng-click="sort('MTPDateZEO')">MTP Date
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MTPDateZEO'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+
+                    <th ng-click="sort('EnvironmentEMR')">Environment
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='EnvironmentEMR'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+<!--                    <th ng-click="sort('ScriptVersionEMR')">Script Version
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='ScriptVersionEMR'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th> -->
+
+                     <th ng-click="sort('MTPDateEMR')">MTP Date
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MTPDateEMR'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+
+                  </tr>
+              </thead>
+               <tbody>
+                      <tr dir-paginate="event in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize" >
+                          <td>{{event.MID}}</td>
+                          <td>{{event.EnvironmentITG}}</td>
+                          <td>{{event.MTIDate}}</td>
+                          <td>{{event.EnvironmentJAD}}</td>
+                          <td>{{event.MTPDateJAD}}</td>
+                          <td>{{event.EnvironmentZEO}}</td>
+                          <td>{{event.MTPDateZEO}}</td>
+                          <td>{{event.EnvironmentEMR}}</td>
+                          <td>{{event.MTPDateEMR}}</td>                         
+                        </tr>
+              </tbody>    
+            </table>   
+              <uib-pagination ng-show="total" direction-links="true" boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+          </div>
+      </div> 
+	</div>	
+</div>

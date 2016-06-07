@@ -1,0 +1,10 @@
+{
+    "userid": 10,
+    "email": "jing.he@hpe.com",
+    "username": "he jing",
+    "category": {
+        "userRollupStatus": true,
+        "userSlaMetrics": false,
+        "userEdwBaseline": true
+    }
+}

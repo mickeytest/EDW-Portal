@@ -1,0 +1,31 @@
+{
+    "categories": [
+        "Dec,2015",
+        "Jan,2016",
+        "Feb,2016",
+        "Mar,2016"
+    ],
+    "OptimizationTrend": [
+        {
+            "title": "Optimization Total",
+            "data": [
+                [
+                    0,
+                    83
+                ],
+                [
+                    1,
+                    62
+                ],
+                [
+                    2,
+                    57
+                ],
+                [
+                    3,
+                    26
+                ]
+            ]
+        }
+    ]
+}

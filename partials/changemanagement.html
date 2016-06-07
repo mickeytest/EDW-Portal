@@ -1,0 +1,36 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+
+       <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">CM BreakFix Tickets <!-- <small>Statistics Overview</small> --></h1>   
+           
+          </div>
+       </div>
+       <div class="row">&nbsp;</div>
+         <div class="row">
+            <div class="col-lg-12">
+              <div class="btn-group">
+<!--                 <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Day'" >Day</label> -->
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Week'" >Week</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Month'" >Month</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Year'" >Year</label>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">                       
+                        <chart value='bdschart' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+        </div> 
+  </div>  
+</div>

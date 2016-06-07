@@ -1,0 +1,252 @@
+{
+    "missSLA":{
+        "data": [
+            {
+                "name": "ZEO",
+                "y": 65,
+                "drilldown": "ZEO"
+            },
+            {
+                "name": "EMR",
+                "y": 65,
+                "drilldown": "EMR"
+            },
+            {
+                "name": "JAD",
+                "y": 65,
+                "drilldown": "JAD"
+            }
+        ],
+        "drilldown": [
+            {
+                "id": "ZEO",
+                "data": [
+                    [
+                        "Monday",
+                        11
+                    ],
+                    [
+                        "Tuesday",
+                        16
+                    ],
+                    [
+                        "Wednesday",
+                        15
+                    ],
+                    [
+                        "Thursday",
+                        19
+                    ],
+                    [
+                        "Friday",
+                        12
+                    ],
+                    [
+                        "Saturday",
+                        21
+                    ],
+                    [
+                        "Sunday",
+                        22
+                    ]
+                ]
+            },
+            {
+                "id": "EMR",
+                "data": [
+                    [
+                        "Monday",
+                        11
+                    ],
+                    [
+                        "Tuesday",
+                        16
+                    ],
+                    [
+                        "Wednesday",
+                        15
+                    ],
+                    [
+                        "Thursday",
+                        19
+                    ],
+                    [
+                        "Friday",
+                        12
+                    ],
+                    [
+                        "Saturday",
+                        21
+                    ],
+                    [
+                        "Sunday",
+                        22
+                    ]
+                ]
+            },
+            {
+                "id": "JAD",
+                "data": [
+                    [
+                        "Monday",
+                        11
+                    ],
+                    [
+                        "Tuesday",
+                        16
+                    ],
+                    [
+                        "Wednesday",
+                        15
+                    ],
+                    [
+                        "Thursday",
+                        19
+                    ],
+                    [
+                        "Friday",
+                        12
+                    ],
+                    [
+                        "Saturday",
+                        21
+                    ],
+                    [
+                        "Sunday",
+                        22
+                    ]
+                ]
+            }
+        ]
+    },
+    "meetSLA":{
+        "data": [
+            {
+                "name": "ZEO",
+                "y": 65,
+                "drilldown": "ZEO"
+            },
+            {
+                "name": "EMR",
+                "y": 65,
+                "drilldown": "EMR"
+            },
+            {
+                "name": "JAD",
+                "y": 65,
+                "drilldown": "JAD"
+            }
+        ],
+        "drilldown": [
+            {
+                "id": "ZEO",
+                "data": [
+                    [
+                        "Monday",
+                        11
+                    ],
+                    [
+                        "Tuesday",
+                        16
+                    ],
+                    [
+                        "Wednesday",
+                        15
+                    ],
+                    [
+                        "Thursday",
+                        19
+                    ],
+                    [
+                        "Friday",
+                        12
+                    ],
+                    [
+                        "Saturday",
+                        21
+                    ],
+                    [
+                        "Sunday",
+                        22
+                    ]
+                ]
+            },
+            {
+                "id": "EMR",
+                "data": [
+                    [
+                        "Monday",
+                        11
+                    ],
+                    [
+                        "Tuesday",
+                        16
+                    ],
+                    [
+                        "Wednesday",
+                        15
+                    ],
+                    [
+                        "Thursday",
+                        19
+                    ],
+                    [
+                        "Friday",
+                        12
+                    ],
+                    [
+                        "Saturday",
+                        21
+                    ],
+                    [
+                        "Sunday",
+                        22
+                    ]
+                ]
+            },
+            {
+                "id": "JAD",
+                "data": [
+                    [
+                        "Monday",
+                        11
+                    ],
+                    [
+                        "Tuesday",
+                        16
+                    ],
+                    [
+                        "Wednesday",
+                        15
+                    ],
+                    [
+                        "Thursday",
+                        19
+                    ],
+                    [
+                        "Friday",
+                        12
+                    ],
+                    [
+                        "Saturday",
+                        21
+                    ],
+                    [
+                        "Sunday",
+                        22
+                    ]
+                ]
+            }
+        ]
+    },
+    "sladetailed": [
+        {"Date":"2015-12-15",
+        "Environment":"ZEO",
+        "Week":"Monday",
+        "StartTime":"2015/12/15 09:00:23",
+        "EndTime":"2015/12/15 16:00:23",
+        "SLAStatus":"Meet",
+        "T15Mins":"10"
+        }
+    ]
+}

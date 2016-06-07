@@ -1,0 +1,165 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">Rollup Long Running Job Analytic <!-- <small>Statistics Overview</small> --></h1>   
+           
+          </div>
+       </div>
+       <div class="row">&nbsp;</div>
+
+       <div class="row">
+          <div class="col-lg-12">
+            <form name="myForm" class="form-horizontal pull-left animated bounceInRight" >
+             <label class="col-lg-3 control-label pull-left">Environment</label>
+              <div class="col-lg-9 pull-right" >
+                <label class="radio-inline">
+                  <input type="radio" value= "BER"  ng-model="env" >
+                  ITG           
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value= "ZEO"  ng-model="env" >
+                   ZEO
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value= "EMR" ng-model="env" >
+                   EMR
+                </label >
+                <label class="radio-inline">
+                  <input type="radio" value= "JAD"  ng-model="env" >
+                   JAD
+                </label>
+               </div>
+            
+             </form>
+          </div>
+       </div>
+       <div class="row">&nbsp;</div>
+         <div class="row">
+            <div class="col-lg-12">
+              <div class="btn-group">
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Day'" >Day</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Week'" >Week</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Month'" >Month</label>
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'mecmonth'" >Mec Month</label> 
+                <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Year'" >Year</label>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">                       
+                        <chart value='top10Chart' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="row">&nbsp;</div>
+         <div class="row">
+            <div class="col-lg-12">
+              <div class="btn-group">
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Day'" >Day</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Week'" >Week</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Month'" >Month</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'mecmonth'" >Mec Month</label>
+                <label class="btn btn-default" ng-model="radioModel1" uib-btn-radio="'Year'" >Year</label>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                    </div>
+                    <div  class="panel-body">                       
+                        <chart value='onCPChart' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="row">&nbsp;</div> 
+                <h3><small><p class="text-info" ><b>Long Running Jobs Detailed:</b></p></small></h3>
+
+        <!-- /.row -->
+        <div class="row" class="table-responsive">
+         <div class="col-lg-9 ">
+           <label>Items per page:</label>
+           <label class="checkbox-inline">
+              <input type="number" min="1" class="form-control" ng-model="pageSize">
+          </label>
+        
+         </div>  
+         <div class="col-lg-3 pull-right">
+           <label>Search:</label>
+            <label class="checkbox-inline">
+              <input id="query" ng-model="query" ng-change="change()">
+           </label>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div> 
+
+      <div class="row" >
+          <div class="col-lg-12">
+            <table class="table table-bordered table-hover"  >
+               <thead>
+                  <tr>
+                   <th ng-click="sort('RollupDate')">RollupDate
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='RollupDate'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>   
+                    <th ng-click="sort('BATCHID')">Batch ID
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='BATCHID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>                                   
+                   <th ng-click="sort('MID')">MID
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                   <th ng-click="sort('CPFlag')">CP Flag
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='CPFlag'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+
+                     <th ng-click="sort('Duration')">Duration
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='Duration'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('Duration30DaysAverage')">Duration_30_Days_Average
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='Duration30DaysAverage'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('RowsAffected')">Rows_Affected
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='RowsAffected'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('RowsAffected7DaysAverage')">Rows_Affected_7_Days_Average
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='RowsAffected7DaysAverage'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('PercentageRollupTime')">Percentage/RollupTime
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='PercentageRollupTime'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                  </tr>
+              </thead>
+               <tbody>
+                      <tr dir-paginate="event in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize" >
+                          <td>{{event.RollupDate}}</td>
+                          <td>{{event.BatchID}}</td>
+                          <td>{{event.MID}}</td>
+<!--                           <td><font ng-class="event.CPFlag ==1? 'highlightred':''">{{event.CPFlag ==  1? 'YES' : 'NO' }}</font></td> -->
+                          <td>{{event.CPFlag}}</td>
+                          <td>{{event.Duration | number:2}}</td>
+                          <td>{{event.Duration30DaysAverage | number:0}}</td>
+                          <td>{{event.RowsAffected | number:0}}</td>
+                          <td>{{event.RowsAffected7DaysAverage | number:0}}</td>
+                          <td>{{event.PercentageRollupTime | number:2}}%</td>                         
+                        </tr>
+              </tbody>    
+            </table>   
+              <uib-pagination ng-show="total" direction-links="true" boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+          </div>
+      </div> 
+	</div>	
+</div>

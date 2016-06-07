@@ -1,0 +1,378 @@
+<script type="text/javascript">
+$('.button')
+  .popup({
+    inline: true
+  })
+;
+</script>
+<div id="page-wrapper">
+ 	<div class="container-fluid" >
+ 		<div class="row">
+	        <div class="col-lg-12">
+	              <h1 class="ui dividing header animated bounceInRight">
+	                  Mission Critical Data Flow Control (MCDFC)
+                    <div class="ui buttons">
+                      <button ng-class="!critical?'ui positive button':'ui button'" ng-click="criticalButtonClick()">All</button>
+                      <div class="or"></div>
+                      <button ng-class="critical?'ui positive button':'ui button'"  ng-click="criticalButtonClick()">Critical</button>
+                    </div>
+	              </h1>
+	          </div>
+	      	</div>
+        <div class="row">&nbsp;</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body"> 
+            <div class="col-lg-12">    
+                <div class="col-lg-12" >    
+                  <div class="col-lg-8"  >
+                       <label class="col-lg-3 control-label text-left"><font style="font-size: 140%">Environment:</font></label>
+                         <p class="col-lg-9 input-group " >
+                      <label class="radio-inline">
+                        <input type="radio" value= "ZEO"  ng-model="env2" >
+                         ZEO
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" value= "EMR" ng-model="env2" >
+                         EMR
+                      </label >
+                      <label class="radio-inline">
+                        <input type="radio" value= "JAD"  ng-model="env2" >
+                         JAD
+                      </label>   
+                     	<label class="radio-inline">
+                        <input type="radio" value= "ALL"  ng-model="env2" >
+                         ALL
+                      </label>  
+                    </p>
+                  </div>
+              </div>
+                <div class="col-lg-12" >    
+                  <div class="col-lg-8"  >
+                       <label class="col-lg-3 control-label text-left"><font style="font-size: 140%">File Type:</font></label>
+                         <p class="col-lg-9 input-group " >
+                      <label class="checkbox-inline">
+                        <input type="checkbox"  ng-model="viewtype1" >
+                         File Arrived Late
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" ng-model="viewtype2" >
+                         File Loaded Late
+                      </label >
+                      <label class="checkbox-inline">
+                        <input type="checkbox"  ng-model="viewtype3" >
+                         File Didn't Arrive
+                      </label>   
+
+                    </p>
+ 
+                  </div>
+                   <div ng-show="viewtype1==false && viewtype2==false && viewtype3==false "  class=" ui left pointing red basic label">
+                      Please at lease choose one file type!
+                      </div>
+              </div>
+
+               <div class ="col-lg-12">
+                  <div class="col-lg-8">
+                      <label class="col-lg-3 control-label text-left" ><font style="font-size: 140%">From:</font></label>
+                    <p class="col-lg-9 input-group " >
+                     <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt4" is-open="opened4" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions4" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event,'opened4')" ><i class="glyphicon glyphicon-calendar"></i></button> 
+                      </span>
+                    </p>
+                  </div>
+                    <div  ng-show="dt4> dt5" class=" ui left pointing red basic label">
+                           Please choose correct From and To date!
+                      </div>
+               </div>
+                <div class="col-lg-12">
+                  <div class="col-lg-8">
+                     <label class="col-lg-3 control-label text-left" ><font style="font-size: 140%">To:  </font></label>
+                     <p class="col-lg-9 input-group " >
+                     <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt5" is-open="opened5" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions5"  date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event,'opened5')" ><i class="glyphicon glyphicon-calendar"></i></button>
+                
+                      </span>
+                     
+                       
+                    </p>
+                  </div>
+                  <div class="col-lg-2">
+                       <button type="button" class="btn btn-default" ng-click="viewLineTrend()"><i class="fa fa-hand-o-right"></i> View</button> 
+                   
+                  </div>
+                </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> MCDFC Report &nbsp;&nbsp;&nbsp;
+
+  					<i class=" icon fa fa-eye-slash button" data-content="Unselect all the series" data-variation="small" ng-show="selectAll" ng-click="toselectAll()"></i>
+                      <i class="icon fa fa-eye button" data-content="Select all the series" data-variation="small" ng-show="!selectAll" ng-click="toselectAll()"></i>
+ 
+                </div>
+                <div  class="panel-body">                       
+                    <chart id="linetrendchart" value='mcdfclinetrend' height="400" chartobj='chartObj'>
+                    </chart>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h1><small><p class="text-info" ><b>View MCDFC Detailed Trend:</b></p></small></h1>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body"> 
+            <div class="col-lg-12">    
+                <div class="col-lg-12" >    
+                  <div class="col-lg-8"  >
+                       <label class="col-lg-3 control-label text-left"><font style="font-size: 140%">Environment:</font></label>
+                         <p class="col-lg-9 input-group " >
+                      <label class="radio-inline">
+                        <input type="radio" value= "ZEO"  ng-model="env" >
+                         ZEO
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" value= "EMR" ng-model="env" >
+                         EMR
+                      </label >
+                      <label class="radio-inline">
+                        <input type="radio" value= "JAD"  ng-model="env" >
+                         JAD
+                      </label>   
+                     	<label class="radio-inline">
+                        <input type="radio" value= "ALL"  ng-model="env" >
+                         ALL
+                      </label>  
+                    </p>
+                  </div>
+              </div>
+
+              <div class="col-lg-12" >    
+                  <div class="col-lg-8"  >
+                       <label class="col-lg-3 control-label text-left"><font style="font-size: 140%">Source System:</font></label>
+                        <p class="col-lg-9 input-group " >
+							<select class="form-control" ng-model="selectedSource" ng-options="x.value for x in sourcesystems track by x.id">ALL
+							</select>
+						</p>
+                  </div>
+              </div>
+
+               <div class ="col-lg-12">
+                  <div class="col-lg-8">
+                      <label class="col-lg-3 control-label text-left" ><font style="font-size: 140%">From:</font></label>
+                    <p class="col-lg-9 input-group " >
+                     <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt2" is-open="opened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions2" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event,'opened2')" ><i class="glyphicon glyphicon-calendar"></i></button> 
+                      </span>
+                    </p>
+                  </div>
+                  <div  ng-show="dt2> dt3" class=" ui left pointing red basic label">
+                           Please choose correct From and To date!
+                      </div>
+               </div>
+                <div class="col-lg-12">
+                  <div class="col-lg-8">
+                     <label class="col-lg-3 control-label text-left" ><font style="font-size: 140%">To:  </font></label>
+                     <p class="col-lg-9 input-group " >
+                     <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt3" is-open="opened3" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions3"  date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event,'opened3')" ><i class="glyphicon glyphicon-calendar"></i></button>
+                
+                      </span>
+                    </p>
+                  </div>
+                  <div class="col-lg-2">
+                       <button type="button" class="btn btn-default" ng-click="viewTrend()"><i class="fa fa-hand-o-right"></i> View</button> 
+                  </div>
+                </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">&nbsp;</div>
+
+        <div class="row" >
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                </div>
+                <div  class="panel-body"  >                       
+                    <chart value='mcdfctrend' height="400" chartobj='chartObj'>
+                    </chart>
+                </div>
+            </div>
+        </div>
+    </div>
+ 	<h1><small><p class="text-info" ><b>View MCDFC Report by Date:</b></p></small></h1>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body"> 
+            <div class="col-lg-12">    
+                <div class="col-lg-12" >    
+                  <div class="col-lg-10"  >
+                       <label class="col-lg-3 control-label text-left"><font style="font-size: 140%">Environment:</font></label>
+                         <p class="col-lg-9 input-group " >
+                      <label class="radio-inline">
+                        <input type="radio" value= "ZEO"  ng-model="env1" >
+                         ZEO
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" value= "EMR" ng-model="env1" >
+                         EMR
+                      </label >
+                      <label class="radio-inline">
+                        <input type="radio" value= "JAD"  ng-model="env1" >
+                         JAD
+                      </label>   
+                     	<label class="radio-inline">
+                        <input type="radio" value= "ALL"  ng-model="env1" >
+                         ALL
+                      </label>  
+                    </p>
+                  </div>
+              </div>
+
+              <div class="col-lg-12" >    
+                  <div class="col-lg-10"  >
+                       <label class="col-lg-3 control-label text-left"><font style="font-size: 140%">Source System:</font></label>
+                        <p class="col-lg-9 input-group " >
+							<select class="form-control" ng-model="selectedSource1" ng-options="x.value for x in sourcesystems track by x.id">
+							</select>
+						</p>
+                  </div>
+              </div>
+
+               <div class ="col-lg-12">
+                  <div class="col-lg-10">
+                      <label class="col-lg-3 control-label text-left" ><font style="font-size: 140%">Date:</font></label>
+                    <p class="col-lg-9 input-group " >
+                       <input  id="datequery" type="text" class="form-control" uib-datepicker-popup ng-model="dt1" is-open="opened1" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-default" ng-click="open($event,'opened1')"><i class="glyphicon glyphicon-calendar"></i></button>
+                       </span>
+                    </p>
+                  </div>
+                  <div class="col-lg-2">
+                       <button type="button" class="btn btn-default" ng-click="viewmcdfcbyday()"><i class="fa fa-hand-o-right"></i> View</button> 
+                  </div>
+               </div>
+			   
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>   </h3>
+                </div>
+                <div  class="panel-body">                       
+                    <chart value='mcdfc' height="400" chartobj='chartObj'>
+                    </chart>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <button id="myA" ng-click="viewDetailByType('A')" ng-show=false></button>
+	 <button id="myB" ng-click="viewDetailByType('B')" ng-show=false></button>
+	 <button id="myC" ng-click="viewDetailByType('C')" ng-show=false></button>
+	 <button id="myD" ng-click="viewDetailByType('D')" ng-show=false></button>
+	 <button id="mydrillup" ng-click="drillup()" ng-show=false></button>
+	 <button id="clickTrend" ng-click="clickTrend()" ng-model="clickeddate" ng-show=false></button>
+
+    <div ng-show="isshow">
+	    <h1><small><p class="text-info" ><b>MCDFC Detailed:</b></p></small></h1>
+	      <div class="row" class="table-responsive">
+	         <div class="col-lg-9 ">
+	           <label>Items per page:</label>
+	           <label class="checkbox-inline">
+	              <input type="number" min="1" class="form-control" ng-model="pageSize">
+	          </label>
+	        
+	         </div>  
+	         <div class="col-lg-3 pull-right">
+	           <label>Search:</label>
+	            <label class="checkbox-inline">
+	              <input id="query" class="form-control"  ng-model="query" ng-change="change()">
+	           </label>
+	          </div>
+	      </div>
+
+	      <div class="row">&nbsp;</div> 
+	      <div class="row" >
+	        <div class="col-lg-12">
+	            <table class="table table-bordered table-hover"  >
+	                 <thead>
+	                    <tr>
+                      <th class="col-lg-1" ng-click="sort('SERVER')">Server
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='SERVER'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th> 
+	                     <th class="col-lg-1" ng-click="sort('SOURCECODE')">Source Code
+	                      <span class="glyphicon sort-icon" ng-show="sortKey=='SOURCECODE'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                    </th>   
+	                      <th class="col-lg-1" ng-click="sort('SOURCENAME')">Source Name
+	                        <span class="glyphicon sort-icon" ng-show="sortKey=='SOURCENAME'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                      </th>                                   
+	                     <th class="col-lg-1" ng-click="sort('EPRID')">EPR ID
+	                        <span class="glyphicon sort-icon" ng-show="sortKey=='EPRID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                      </th>
+	                     <th class="col-lg-1" ng-click="sort('PORTFOLIO')">Portfolio
+	                        <span class="glyphicon sort-icon" ng-show="sortKey=='PORTFOLIO'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                      </th>
+
+	                       <th class="col-lg-1" ng-click="sort('DATASUBJECT')">Data Subject
+	                        <span class="glyphicon sort-icon" ng-show="sortKey=='DATASUBJECT'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                      </th>
+	                       <th class="col-lg-1" ng-click="sort('FILETS')">File TS
+	                        <span class="glyphicon sort-icon" ng-show="sortKey=='FILETS'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                      </th>
+	                       <th class="col-lg-1" ng-click="sort('VALUE')">Amount
+	                        <span class="glyphicon sort-icon" ng-show="sortKey=='VALUE'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                      </th>  
+	                    </tr>
+	                </thead>
+	                 <tbody>
+	                        <tr dir-paginate="job in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize" >
+                              <td>{{job.SERVER}}</td>
+	                            <td>{{job.SOURCECODE}}</td>
+	                            <td>{{job.SOURCENAME}}</td>
+	                            <td>{{job.EPRID}}</td>
+	                            <td>{{job.PORTFOLIO}}</td>
+	                            <td>{{job.DATASUBJECT}}</td>
+	                            <td>{{job.FILETS}}</td>                         
+	                            <td>{{job.VALUE}}</td>                         
+	                          </tr>
+	                </tbody>    
+	              </table> 
+	              <uib-pagination ng-show="total" direction-links="true" boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+	        </div>   
+	      </div>
+     </div>
+
+	</div>
+</div>

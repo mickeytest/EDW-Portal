@@ -1,0 +1,48 @@
+<script>
+    /**
+     * Synchronize zooming through the setExtremes event handler.
+     */
+
+    function syncExtremes(e) {
+        var thisChart = this.chart;
+
+        if (e.trigger !== 'syncExtremes') { // Prevent feedback loop
+            Highcharts.each(Highcharts.charts, function (chart) {
+                if (chart !== thisChart) {
+                    if (chart.xAxis[0].setExtremes) { // It is null while updating
+                        chart.xAxis[0].setExtremes(e.min, e.max, undefined, false, { trigger: 'syncExtremes' });
+                    }
+                }
+            });
+        }
+    }
+</script>
+
+
+<div id="page-wrapper" >
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">Detailed Performance<!--  <small>Statistics Overview</small> --></h1> 
+  			</div>
+  	    </div>
+         <div class="row">&nbsp;</div>
+  	    <div class="row" id="container">
+  	       <div class="col-lg-12">
+  	       		<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  <font class="fontbold">{{env}}</font> Detailed Performance Chart for <font class="fontbold">{{date}}</font> 
+                        <a href = "{{baseURL}}/#/performance" class="btn btn-default" role="button"><i class="fa fa-undo"></i></a>
+                         <a class="btn btn-default" role="button"  ng-csv="getArray" csv-header="getHeader()" filename="{{env}}_{{date}}.csv" field-separator=";" decimal-separator="."><i class="fa fa-download"></i></a>
+                        </h3>
+
+                    </div>
+                    <div  class="panel-body" ng-repeat="pd in pDetail">
+                        
+           	  	    <chart value='pd' height="150" chartobj='chartObj'>
+                    </div>
+                </div>
+            </div>
+            </div>
+  </div>
+</div>

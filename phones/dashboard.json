@@ -1,0 +1,188 @@
+{
+    "date": "2015/12/10",
+    "ZEODST": 1,
+    "EMRDST": 1,
+    "info": [
+        {
+            "name": "OffIVC Completed",
+            "color": "#FFFF7A",
+            "x": 0,
+            "data": [
+                "2015/12/10 00:12:02",
+                "2015/12/10 00:24:27"
+            ]
+        },
+        {
+            "name": "OffFIN Completed",
+            "color": "#FFFF7A",
+            "x": 0,
+            "data": [
+                "2015/12/09 23:56:39",
+                "2015/12/10 00:11:51"
+            ]
+        },
+        {
+            "name": "Running",
+            "color": "#81D5A9",
+            "x": 0,
+            "data": [
+                "2015/12/10 02:00:02",
+                "2015/12/10 11:58:50"
+            ]
+        },
+        {
+            "name": "OffIVC not started",
+            "color": "#C9C9C9",
+            "x": 1,
+            "data": [
+                "2015/12/10 05:00:00",
+                "2015/12/10 08:00:00"
+            ]
+        },
+        {
+            "name": "OffFIN not started",
+            "color": "#C9C9C9",
+            "x": 1,
+            "data": [
+                "2015/12/10 05:00:00",
+                "2015/12/10 08:00:00"
+            ]
+        },
+        {
+            "name": "Not Started",
+            "color": "#ABABAB",
+            "x": 1,
+            "data": [
+                "2015/12/10 08:00:00",
+                "2015/12/10 16:30:00"
+            ]
+        },
+        {
+            "name": "OffIVC not started",
+            "color": "#C9C9C9",
+            "x": 2,
+            "data": [
+                "2015/12/10 16:00:00",
+                "2015/12/10 19:00:00"
+            ]
+        },
+        {
+            "name": "OffFIN not started",
+            "color": "#C9C9C9",
+            "x": 2,
+            "data": [
+                "2015/12/10 16:00:00",
+                "2015/12/10 19:00:00"
+            ]
+        },
+        {
+            "name": "Not Started",
+            "color": "#ABABAB",
+            "x": 2,
+            "data": [
+                "2015/12/10 19:00:00",
+                "2015/12/11 03:30:00"
+            ]
+        },
+        {
+            "name": "OffIVC Completed",
+            "color": "#FFFF7A",
+            "x": 0,
+            "data": [
+                "2015/12/08 23:24:22",
+                "2015/12/08 23:51:06"
+            ]
+        },
+        {
+            "name": "OffFIN Completed",
+            "color": "#FFFF7A",
+            "x": 0,
+            "data": [
+                "2015/12/08 23:04:20",
+                "2015/12/08 23:24:08"
+            ]
+        },
+        {
+            "name": "Completed",
+            "color": "#FC9C12",
+            "x": 0,
+            "data": [
+                "2015/12/09 01:59:51",
+                "2015/12/09 11:29:32"
+            ]
+        },
+        {
+            "name": "OffIVC not started",
+            "color": "#C9C9C9",
+            "x": 1,
+            "data": [
+                "2015/12/09 05:00:00",
+                "2015/12/09 08:00:00"
+            ]
+        },
+        {
+            "name": "OffFIN not started",
+            "color": "#C9C9C9",
+            "x": 1,
+            "data": [
+                "2015/12/09 05:00:00",
+                "2015/12/09 08:00:00"
+            ]
+        },
+        {
+            "name": "Completed",
+            "color": "#FC9C12",
+            "x": 1,
+            "data": [
+                "2015/12/09 09:00:13",
+                "2015/12/09 18:24:00"
+            ]
+        },
+        {
+            "name": "OffIVC Completed",
+            "color": "#FFFF7A",
+            "x": 2,
+            "data": [
+                "2015/12/09 16:26:43",
+                "2015/12/09 16:49:24"
+            ]
+        },
+        {
+            "name": "OffFIN Completed",
+            "color": "#FFFF7A",
+            "x": 2,
+            "data": [
+                "2015/12/09 16:01:13",
+                "2015/12/09 16:26:05"
+            ]
+        },
+        {
+            "name": "Completed",
+            "color": "#FC9C12",
+            "x": 2,
+            "data": [
+                "2015/12/09 19:00:41",
+                "2015/12/10 04:54:21"
+            ]
+        }
+    ],
+    "SLABreach":
+        [
+        {"Date":"2015-12-10",
+        "Environment":"ZEO",
+        "StartOnTime":"Yes",
+        "DelayReason":"XXX",
+        "SLAMeet":"No",
+        "SLAMissReason":"Sorry I don't understand",
+        "Comments":"I don't know"
+        },
+        {"Date":"2015-12-09",
+        "Environment":"JAD",
+        "StartOnTime":"Yes",
+        "DelayReason":"XXX",
+        "SLAMeet":"No",
+        "SLAMissReason":"Orange Juice",
+        "Comments":"Eric"
+        }
+        ]
+}

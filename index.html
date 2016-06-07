@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>EDW Rollup Summary</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/sb-admin.css" >
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="bower_components/angular-mass-autocomplete/massautocomplete.theme.css" type="text/css">
+  <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.min.css" type="text/css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+
+  <script src="bower_components/highstock/js/highstock.js"></script>
+  <script src="bower_components/highstock/js/highcharts-more.js"></script>
+  <script src="bower_components/highstock/js/modules/exporting.js"></script>
+  <script src="bower_components/highstock/js/modules/drilldown.js"></script>
+  
+  <script src="bower_components/bootstrap-gh-pages/ui-bootstrap-tpls-0.14.3.js"></script>
+  <script src="bower_components/angular-mass-autocomplete/massautocomplete.min.js"></script>
+  <script src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+  <script src="bower_components/ng-csv/build/ng-csv.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/animations.js"></script>
+  
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/dirPagination.js"></script>
+  <script src="js/myChart.js"></script>
+  <script src="js/regression.js"></script>
+
+
+<style>
+    body{
+      padding:25px;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="wrapper" >
+        <!-- Navigation -->
+         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/homepage"><i class="fa fa-tachometer"></i> EDW Operation Dashboard</a>
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><i class="fa fa-align-justify"></i></a>
+              
+            </div>
+            <div class="nav navbar-right top-nav">
+                  <a href="#/requestSubscribe" ><i class="fa fa-envelope" ></i>  Subscribe</a>
+            </div>
+    
+            <div  class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="HeaderController">
+                <ul id="sidebar-wrapper" class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#baseline"><i class="fa fa-fw fa-life-ring"></i> EDW Operation Metrics <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="baseline" class="collapse">
+                            <li ng-class="{ active: isCurrentPath('/baselinemetric') }">
+                                <a href="#/baselinemetric"><i class="fa fa-fw fa-trophy"></i> EDW BaseLine </a>
+                            </li>
+                            <li ng-class="{ active: isCurrentPath('/yottaplatformtrend') }">
+                                <a href="#/yottaplatformtrend"><i class="fa fa-fw fa-map"></i> Yotta Platform </a>
+                            </li>
+                            <li ng-class="{ active: isCurrentPath('/seaquestplatformtrend') }">
+                                <a href="#/seaquestplatformtrend"><i class="fa fa-fw fa-database"></i> SeaQuest Platform</a>
+                            </li>      
+                            <li ng-class="{ active: isCurrentPath('/uamtrend') }">
+                                <a href="#/uamtrend"><i class="fa fa-fw fa-calculator"></i> UAM </a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/dataqualitytrend') }">
+                                <a href="#/dataqualitytrend"><i class="fa fa-fw fa-check-square-o"></i> Data Quality </a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/changemanagementtrend') }">
+                                <a href="#/changemanagementtrend"><i class="fa fa-fw fa-retweet"></i> Change Management </a>
+                            </li>   
+                             <li ng-class="{ active: isCurrentPath('/devoncalltrend') }">
+                                <a href="#/devoncalltrend"><i class="fa fa-fw fa-fax"></i> Dev On-Call </a>
+                            </li>   
+                            <li ng-class="{ active: isCurrentPath('/releasemanagementtrend') }">
+                                <a href="#/releasemanagementtrend"><i class="fa fa-fw fa-users"></i> Release Management </a>
+                            </li>     
+                            <li ng-class="{ active: isCurrentPath('/edwonboardingtrend') }">
+                                <a href="#/edwonboardingtrend"><i class="fa fa-fw fa-sliders"></i> EDW On-boarding </a>
+                            </li>   
+                            <li ng-class="{ active: isCurrentPath('/edwoptimizationtrend') }">
+                                <a href="#/edwoptimizationtrend"><i class="fa fa-fw fa-newspaper-o"></i> EDW Optimization </a>
+                            </li>                                         
+                        </ul>
+                    </li>
+
+                     <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#rollup"><i class="fa fa-fw fa-life-ring"></i> Rollup Dashboard <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="rollup" class="collapse in">
+                            <li ng-class="{ active: isCurrentPath('/slametric') }">
+                                <a href="#/slametric"><i class="fa fa-fw fa-codiepie"></i> SLA Metrics </a>
+                            </li>
+                            <!--<li ng-class="{ active: isCurrentPath('/oncallmetric') }">
+                                <a href="#/oncallmetric"><i class="fa fa-fw fa-balance-scale"></i> On-Call Metrics </a>
+                            </li>   -->                          
+                            <li ng-class="{ active: isCurrentPath('/fileloading') }">
+                                <a href="#/fileloading"><i class="fa fa-fw fa-cubes"></i> File Loading </a>
+                            </li>
+                            <li ng-class="{ active: isCurrentPath('/cpm') }">
+                                <a href="#/cpm"><i class="fa fa-fw fa-arrows-h"></i> Critical Path </a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/rollupbyportolio') }">
+                                <a href="#/rollupbyportolio"><i class="fa fa-fw fa-link"></i> Rollup by Porfolio </a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/cpmDetail/ZEO/19851.DP.999.1') }">
+                                <a href="#/cpmDetail/ZEO/19851.DP.999.1"><i class="fa fa-fw fa-sliders"></i> MID Detail</a>
+                            </li>                              
+                            <li ng-class="{ active: isCurrentPath('/performance') }">
+                        <a href="#/performance"><i class="fa fa-fw fa-line-chart"></i> Rollup Performance </a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/ranalytic') }">
+                                <a href="#/ranalytic"><i class="fa fa-fw fa-paw"></i> Rollup Analytics - Errors </a>
+                            </li>     
+
+                             <li ng-class="{ active: isCurrentPath('/lanalytic') }">
+                                <a href="#/lanalytic"><i class="fa fa-fw fa-bullseye"></i> Rollup Analytics - Long Running Jobs</a>
+                            </li>  
+                             <li ng-class="{ active: isCurrentPath('/mecsummary') }">
+                                <a href="#/mecsummary"><i class="fa fa-fw fa-cogs"></i> Rollup Status During MEC</a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/mcdfc') }">
+                                <a href="#/mcdfc"><i class="fa fa-fw fa-file-o"></i> MCDFC Report</a>
+                            </li>                                                                                                     
+                        </ul>
+                    </li>
+
+                     <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#workstream"><i class="fa fa-fw fa-life-ring"></i> Workstream Dashboard <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="workstream" class="collapse">
+                            <li ng-class="{ active: isCurrentPath('/yottaplatform') }">
+                                <a href="#/yottaplatform"><i class="fa fa-fw fa-spin fa-spinner"></i> Yotta Platform </a>
+                            </li>
+                            <li ng-class="{ active: isCurrentPath('/seaquestplatform') }">
+                                <a href="#/seaquestplatform"><i class="fa fa-fw fa-spin fa-spinner"></i> SeaQuest Platform </a>
+                            </li>
+                            <li ng-class="{ active: isCurrentPath('/uam') }">
+                                <a href="#/uam"><i class="fa fa-fw fa-spin fa-spinner"></i> UAM </a>
+                            </li>     
+                            <li ng-class="{ active: isCurrentPath('/dataquality') }">
+                                <a href="#/dataquality"><i class="fa fa-fw fa-check-square-o"></i> Data Quality </a>
+                            </li>    
+                            <li ng-class="{ active: isCurrentPath('/changemanagement') }">
+                                <a href="#/changemanagement"><i class="fa fa-fw fa-retweet"></i> Change Management </a>
+                            </li>    
+                            <li ng-class="{ active: isCurrentPath('/devoncall') }">
+                                <a href="#/devoncall"><i class="fa fa-fw fa-fax"></i> Dev On-Call </a>
+                            </li>   
+                            <li ng-class="{ active: isCurrentPath('/releasemanagement') }">
+                                <a href="#/releasemanagement"><i class="fa fa-fw fa-users"></i> Release Management </a>
+                            </li>   
+                            <li ng-class="{ active: isCurrentPath('/edwonboarding') }">
+                                <a href="#/edwonboarding"><i class="fa fa-fw fa-spin fa-spinner"></i> EDW On-boarding </a>
+                            </li>   
+                            <li ng-class="{ active: isCurrentPath('/bdsticket') }">
+                                <a href="#/bdsticket"><i class="fa fa-fw fa-ticket"></i> BDS Tickets</a>
+                            </li>  
+                            <li ng-class="{ active: isCurrentPath('/midmtimtpinfo') }">
+                                <a href="#/midmtimtpinfo"><i class="fa fa-fw fa-road"></i> MIDs MTI/MTP Information</a>
+                            </li>    
+                            <li ng-class="{ active: isCurrentPath('/devopsreport') }">
+                                <a href="#/devopsreport"><i class="fa fa-fw fa-file-text-o"></i> EDW Dev Ops Report</a>
+                            </li>                           
+                       </ul>
+                    </li>
+                </ul>
+             </div>
+  
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+
+            <!-- /.navbar-collapse -->
+        </nav>
+
+      <div id="page-content-wrapper">
+            <div class="view-container">
+              <div ng-view class="view-frame"></div>
+              
+            </div>
+      </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+$(window).trigger('resize');
+    });
+
+    </script>
+</body>
+</html>

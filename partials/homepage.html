@@ -1,0 +1,113 @@
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+<div id="page-wrapper" >
+  <div class="container-fluid">
+
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">
+                  EDW MSA Dashboard
+              </h1>
+          </div>
+      </div>
+      <div class="row">&nbsp;</div>
+      <div ng-non-bindable id="myCarousel" class="carousel slide" data-ride="carousel" width="900" height="600" >
+
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" ></li>
+        <li data-target="#myCarousel" data-slide-to="2" ></li>
+        <li data-target="#myCarousel" data-slide-to="3" ></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+              <div class="col-lg-3 col-md-offset-2">
+              <h1><b>Rollup SLA Metrics</b></h1>
+              <div class="row">&nbsp;</div>
+              <h4>The SLA Metric shows the rollup run time status for SLA. We can provide the Rollup SLA status in each MEC Month or customized time period</h4>
+              <div class="row">&nbsp;</div>
+              <div class="row">&nbsp;</div>
+              <a href="#/slametric" class="btn btn-info">Click For More Detail.</a>
+              </div>
+              <div class="col-lg-7"><img src="../img/homepage/sla.png" alt="SLA Metrics" width="650" height="500"></div>
+              
+              <div class="carousel-caption">
+
+              </div>
+          </div>
+
+          <div class="item">
+
+              <div class="col-lg-3 col-md-offset-2">
+              <h1><b>Rollup Performance Status</b></h1>
+              <div class="row">&nbsp;</div>
+              <h4>Shows the Rollup Performance metric, from the Rows Accessed, DISK IO, Memmory Used, etc perspective </h4>
+              <div class="row">&nbsp;</div>
+              <div class="row">&nbsp;</div>
+
+              <a href="#/performance" class="btn btn-info">Click For More Detail.</a>
+              </div>
+              <div class="col-lg-7"><img src="../img/homepage/perform.png" alt="Rollup Performance Status" width="650" height="500"></div>
+              
+              <div class="carousel-caption">
+              
+              </div>
+
+          </div>
+        
+          <div class="item">
+
+              <div class="col-lg-3 col-md-offset-2">
+              <h1><b>Rollup Critical Path</b></h1>
+              <div class="row">&nbsp;</div>
+              <h4>Shows the Critical Path in each rollup, providing real-time Ciritical Path function when rollup is on-going</h4>
+              <div class="row">&nbsp;</div>
+              <div class="row">&nbsp;</div>
+
+              <a href="#/cpm" class="btn btn-info">Click For More Detail.</a>
+              </div> 
+              <div class="col-lg-7"><img src="../img/homepage/cpm2.png" alt="Rollup Critical Path" width="650" height="500"></div>           
+               
+              <div class="carousel-caption">
+ 
+              </div>
+          
+          </div>
+
+          <div class="item">
+
+              <div class="col-lg-3 col-md-offset-2">
+              <h1><b>Key Source System File Arriving Time</b></h1>
+              <div class="row">&nbsp;</div>
+              <p>Shows the Key Source System file arriving time on EDW in an available time period</p>
+              <div class="row">&nbsp;</div>
+              <div class="row">&nbsp;</div>
+
+              <a href="#/fileloading" class="btn btn-info">Click For More Detail.</a>
+              </div>  
+              <div class="col-lg-7"><img src="../img/homepage/kssys.png" alt="Key Source System File Arriving Time" width="650" height="500"></div>          
+              
+             <div class="carousel-caption">
+              </div>
+
+          </div>
+
+        </div>
+
+        <a  class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" target="_self">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+         
+        </a>
+        <a  class="right carousel-control" href="#myCarousel" role="button" data-slide="next" target="_self">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="false"></span>
+         
+        </a>
+      </div>
+
+</div>

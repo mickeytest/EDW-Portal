@@ -1,0 +1,222 @@
+{
+    "data": [
+        {
+            "name": "Sep,1~Sep,7",
+            "y": 11,
+            "drilldown": "Sep,1~Sep,7"
+        },
+        {
+            "name": "Sep,8~Sep,14",
+            "y": 32,
+            "drilldown": "Sep,8~Sep,14"
+        },
+        {
+            "name": "Sep,15~Sep,20",
+            "y": 23,
+            "drilldown": "Sep,15~Sep,20"
+        },
+        {
+            "name": "Sep,21~Sep,27",
+            "y": 14,
+            "drilldown": "Sep,21~Sep,27"
+        },
+        {
+            "name": "Sep,28~Oct,04",
+            "y": 43,
+            "drilldown": "Sep,28~Oct,04"
+        },
+        {
+            "name": "Oct,05~Oct,11",
+            "y": 32,
+            "drilldown": "Oct,05~Oct,11"
+        },
+        {
+            "name": "Oct,12~Oct,19",
+            "y": 34,
+            "drilldown": "Oct,12~Oct,19"
+        },
+        {
+            "name": "Oct,20~Oct,27",
+            "y": 23,
+            "drilldown": "Oct,20~Oct,27"
+        },
+        {
+            "name": "Oct,28~Nov,04",
+            "y": 25,
+            "drilldown": "Oct,28~Nov,04"
+        },
+        {
+            "name": "Nov,05~Nov,12",
+            "y": 32,
+            "drilldown": "Nov,05~Nov,12"
+        },
+        {
+            "name": "Nov,13~Nov,20",
+            "y": 34,
+            "drilldown": "Nov,13~Nov,20"
+        },
+        {
+            "name": "Nov,21~Nov,28",
+            "y": 22,
+            "drilldown": "Nov,21~Nov,28"
+        }
+    ],
+    "drilldown": [
+        {
+            "id": "Sep,1~Sep,7",
+            "data": [
+               [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Sep,8~Sep,14",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Sep,15~Sep,20",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Sep,21~Sep,27",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Sep,28~Oct,04",
+            "data": [
+                             [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Oct,05~Oct,11",
+            "data": [
+               [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Oct,12~Oct,19",
+            "data": [
+                [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Oct,20~Oct,27",
+            "data": [
+                [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Oct,28~Nov,04",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Nov,05~Nov,12",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Nov,13~Nov,20",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        },
+        {
+            "id": "Nov,21~Nov,28",
+            "data": [
+                 [
+                    "Proactive",
+                    2
+                ],
+                [
+                    "Immediately",
+                    3
+                ]
+            ]
+        }
+    ]
+}

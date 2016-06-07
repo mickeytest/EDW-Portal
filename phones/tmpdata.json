@@ -1,0 +1,974 @@
+{
+    "data": [
+        {
+            "Duration": 8.4,
+            "RollupDate": "1/25/2016 0:00"
+        },
+        {
+            "Duration": 9.116666667,
+            "RollupDate": "1/24/2016 0:00"
+        },
+        {
+            "Duration": 9.316666667,
+            "RollupDate": "1/23/2016 0:00"
+        },
+        {
+            "Duration": 10.35,
+            "RollupDate": "1/22/2016 0:00"
+        },
+        {
+            "Duration": 8.483333333,
+            "RollupDate": "1/21/2016 0:00"
+        },
+        {
+            "Duration": 8.65,
+            "RollupDate": "1/20/2016 0:00"
+        },
+        {
+            "Duration": 8.8,
+            "RollupDate": "1/19/2016 0:00"
+        },
+        {
+            "Duration": 8.233333333,
+            "RollupDate": "1/18/2016 0:00"
+        },
+        {
+            "Duration": 8.116666667,
+            "RollupDate": "1/17/2016 0:00"
+        },
+        {
+            "Duration": 8.766666667,
+            "RollupDate": "1/16/2016 0:00"
+        },
+        {
+            "Duration": 8.933333333,
+            "RollupDate": "1/15/2016 0:00"
+        },
+        {
+            "Duration": 8.616666667,
+            "RollupDate": "1/14/2016 0:00"
+        },
+        {
+            "Duration": 8.533333333,
+            "RollupDate": "1/13/2016 0:00"
+        },
+        {
+            "Duration": 9.3,
+            "RollupDate": "1/12/2016 0:00"
+        },
+        {
+            "Duration": 8.716666667,
+            "RollupDate": "1/11/2016 0:00"
+        },
+        {
+            "Duration": 9.133333333,
+            "RollupDate": "1/10/2016 0:00"
+        },
+        {
+            "Duration": 9.5,
+            "RollupDate": "1/9/2016 0:00"
+        },
+        {
+            "Duration": 10.4,
+            "RollupDate": "1/8/2016 0:00"
+        },
+        {
+            "Duration": 10.08333333,
+            "RollupDate": "1/7/2016 0:00"
+        },
+        {
+            "Duration": 9.366666667,
+            "RollupDate": "1/6/2016 0:00"
+        },
+        {
+            "Duration": 11.01666667,
+            "RollupDate": "1/5/2016 0:00"
+        },
+        {
+            "Duration": 8.233333333,
+            "RollupDate": "1/4/2016 0:00"
+        },
+        {
+            "Duration": 8.533333333,
+            "RollupDate": "1/3/2016 0:00"
+        },
+        {
+            "Duration": 9.183333333,
+            "RollupDate": "1/2/2016 0:00"
+        },
+        {
+            "Duration": 8.9,
+            "RollupDate": "1/1/2016 0:00"
+        },
+        {
+            "Duration": 8.716666667,
+            "RollupDate": "12/31/2015 0:00"
+        },
+        {
+            "Duration": 9,
+            "RollupDate": "12/30/2015 0:00"
+        },
+        {
+            "Duration": 8.316666667,
+            "RollupDate": "12/29/2015 0:00"
+        },
+        {
+            "Duration": 8.283333333,
+            "RollupDate": "12/28/2015 0:00"
+        },
+        {
+            "Duration": 7.9,
+            "RollupDate": "12/27/2015 0:00"
+        },
+        {
+            "Duration": 8.383333333,
+            "RollupDate": "12/26/2015 0:00"
+        },
+        {
+            "Duration": 8.85,
+            "RollupDate": "12/25/2015 0:00"
+        },
+        {
+            "Duration": 8.883333333,
+            "RollupDate": "12/24/2015 0:00"
+        },
+        {
+            "Duration": 9.366666667,
+            "RollupDate": "12/23/2015 0:00"
+        },
+        {
+            "Duration": 8.766666667,
+            "RollupDate": "12/22/2015 0:00"
+        },
+        {
+            "Duration": 8.916666667,
+            "RollupDate": "12/21/2015 0:00"
+        },
+        {
+            "Duration": 10.7,
+            "RollupDate": "12/20/2015 0:00"
+        },
+        {
+            "Duration": 11.16666667,
+            "RollupDate": "12/19/2015 0:00"
+        },
+        {
+            "Duration": 9.7,
+            "RollupDate": "12/18/2015 0:00"
+        },
+        {
+            "Duration": 8.866666667,
+            "RollupDate": "12/17/2015 0:00"
+        },
+        {
+            "Duration": 9.05,
+            "RollupDate": "12/16/2015 0:00"
+        },
+        {
+            "Duration": 8.766666667,
+            "RollupDate": "12/15/2015 0:00"
+        },
+        {
+            "Duration": 8.416666667,
+            "RollupDate": "12/14/2015 0:00"
+        },
+        {
+            "Duration": 9.033333333,
+            "RollupDate": "12/13/2015 0:00"
+        },
+        {
+            "Duration": 10.26666667,
+            "RollupDate": "12/12/2015 0:00"
+        },
+        {
+            "Duration": 10.26666667,
+            "RollupDate": "12/11/2015 0:00"
+        },
+        {
+            "Duration": 10.2,
+            "RollupDate": "12/10/2015 0:00"
+        },
+        {
+            "Duration": 9.5,
+            "RollupDate": "12/9/2015 0:00"
+        },
+        {
+            "Duration": 10,
+            "RollupDate": "12/8/2015 0:00"
+        },
+        {
+            "Duration": 8.533333333,
+            "RollupDate": "12/7/2015 0:00"
+        },
+        {
+            "Duration": 9.55,
+            "RollupDate": "12/6/2015 0:00"
+        },
+        {
+            "Duration": 9.6,
+            "RollupDate": "12/5/2015 0:00"
+        },
+        {
+            "Duration": 10.48333333,
+            "RollupDate": "12/4/2015 0:00"
+        },
+        {
+            "Duration": 9.8,
+            "RollupDate": "12/3/2015 0:00"
+        },
+        {
+            "Duration": 9.683333333,
+            "RollupDate": "12/2/2015 0:00"
+        },
+        {
+            "Duration": 9.116666667,
+            "RollupDate": "12/1/2015 0:00"
+        },
+        {
+            "Duration": 8.816666667,
+            "RollupDate": "11/30/2015 0:00"
+        },
+        {
+            "Duration": 9.266666667,
+            "RollupDate": "11/29/2015 0:00"
+        },
+        {
+            "Duration": 11.4,
+            "RollupDate": "11/28/2015 0:00"
+        },
+        {
+            "Duration": 10.01666667,
+            "RollupDate": "11/27/2015 0:00"
+        },
+        {
+            "Duration": 9.95,
+            "RollupDate": "11/26/2015 0:00"
+        },
+        {
+            "Duration": 8.55,
+            "RollupDate": "11/25/2015 0:00"
+        },
+        {
+            "Duration": 10.55,
+            "RollupDate": "11/24/2015 0:00"
+        },
+        {
+            "Duration": 8.766666667,
+            "RollupDate": "11/23/2015 0:00"
+        },
+        {
+            "Duration": 10.73333333,
+            "RollupDate": "11/22/2015 0:00"
+        },
+        {
+            "Duration": 9.583333333,
+            "RollupDate": "11/20/2015 0:00"
+        },
+        {
+            "Duration": 8.95,
+            "RollupDate": "11/19/2015 0:00"
+        },
+        {
+            "Duration": 9.366666667,
+            "RollupDate": "11/18/2015 0:00"
+        },
+        {
+            "Duration": 8.733333333,
+            "RollupDate": "11/17/2015 0:00"
+        },
+        {
+            "Duration": 8.716666667,
+            "RollupDate": "11/16/2015 0:00"
+        },
+        {
+            "Duration": 8.433333333,
+            "RollupDate": "11/15/2015 0:00"
+        },
+        {
+            "Duration": 9.15,
+            "RollupDate": "11/14/2015 0:00"
+        },
+        {
+            "Duration": 9,
+            "RollupDate": "11/13/2015 0:00"
+        },
+        {
+            "Duration": 9.516666667,
+            "RollupDate": "11/12/2015 0:00"
+        },
+        {
+            "Duration": 9.166666667,
+            "RollupDate": "11/11/2015 0:00"
+        },
+        {
+            "Duration": 11.63333333,
+            "RollupDate": "11/10/2015 0:00"
+        },
+        {
+            "Duration": 8.733333333,
+            "RollupDate": "11/9/2015 0:00"
+        },
+        {
+            "Duration": 9.5,
+            "RollupDate": "11/8/2015 0:00"
+        },
+        {
+            "Duration": 9.033333333,
+            "RollupDate": "11/7/2015 0:00"
+        },
+        {
+            "Duration": 10.21666667,
+            "RollupDate": "11/6/2015 0:00"
+        },
+        {
+            "Duration": 9.316666667,
+            "RollupDate": "11/5/2015 0:00"
+        },
+        {
+            "Duration": 9.466666667,
+            "RollupDate": "11/4/2015 0:00"
+        },
+        {
+            "Duration": 9.166666667,
+            "RollupDate": "11/3/2015 0:00"
+        },
+        {
+            "Duration": 8.533333333,
+            "RollupDate": "11/2/2015 0:00"
+        },
+        {
+            "Duration": 9.116666667,
+            "RollupDate": "11/1/2015 0:00"
+        },
+        {
+            "Duration": 10.93333333,
+            "RollupDate": "10/31/2015 0:00"
+        },
+        {
+            "Duration": 10.78333333,
+            "RollupDate": "10/30/2015 0:00"
+        },
+        {
+            "Duration": 9.166666667,
+            "RollupDate": "10/29/2015 0:00"
+        },
+        {
+            "Duration": 8.65,
+            "RollupDate": "10/28/2015 0:00"
+        },
+        {
+            "Duration": 8.666666667,
+            "RollupDate": "10/27/2015 0:00"
+        },
+        {
+            "Duration": 8.4,
+            "RollupDate": "10/26/2015 0:00"
+        },
+        {
+            "Duration": 10.26666667,
+            "RollupDate": "10/25/2015 0:00"
+        },
+        {
+            "Duration": 9.566666667,
+            "RollupDate": "10/24/2015 0:00"
+        },
+        {
+            "Duration": 10.23333333,
+            "RollupDate": "10/23/2015 0:00"
+        },
+        {
+            "Duration": 9.416666667,
+            "RollupDate": "10/22/2015 0:00"
+        },
+        {
+            "Duration": 9.283333333,
+            "RollupDate": "10/21/2015 0:00"
+        },
+        {
+            "Duration": 9.9,
+            "RollupDate": "10/20/2015 0:00"
+        },
+        {
+            "Duration": 8.866666667,
+            "RollupDate": "10/19/2015 0:00"
+        },
+        {
+            "Duration": 9.75,
+            "RollupDate": "10/18/2015 0:00"
+        },
+        {
+            "Duration": 9.316666667,
+            "RollupDate": "10/17/2015 0:00"
+        },
+        {
+            "Duration": 9.533333333,
+            "RollupDate": "10/16/2015 0:00"
+        },
+        {
+            "Duration": 9.366666667,
+            "RollupDate": "10/15/2015 0:00"
+        },
+        {
+            "Duration": 9.116666667,
+            "RollupDate": "10/14/2015 0:00"
+        },
+        {
+            "Duration": 9.2,
+            "RollupDate": "10/13/2015 0:00"
+        },
+        {
+            "Duration": 10.75,
+            "RollupDate": "10/12/2015 0:00"
+        },
+        {
+            "Duration": 9.233333333,
+            "RollupDate": "10/11/2015 0:00"
+        },
+        {
+            "Duration": 9.1,
+            "RollupDate": "10/10/2015 0:00"
+        },
+        {
+            "Duration": 9.866666667,
+            "RollupDate": "10/9/2015 0:00"
+        },
+        {
+            "Duration": 9.483333333,
+            "RollupDate": "10/8/2015 0:00"
+        },
+        {
+            "Duration": 9.233333333,
+            "RollupDate": "10/7/2015 0:00"
+        },
+        {
+            "Duration": 9.183333333,
+            "RollupDate": "10/6/2015 0:00"
+        },
+        {
+            "Duration": 8.533333333,
+            "RollupDate": "10/5/2015 0:00"
+        },
+        {
+            "Duration": 8.766666667,
+            "RollupDate": "10/4/2015 0:00"
+        },
+        {
+            "Duration": 8.833333333,
+            "RollupDate": "10/3/2015 0:00"
+        },
+        {
+            "Duration": 9.533333333,
+            "RollupDate": "10/2/2015 0:00"
+        },
+        {
+            "Duration": 9.55,
+            "RollupDate": "10/1/2015 0:00"
+        },
+        {
+            "Duration": 9.366666667,
+            "RollupDate": "9/30/2015 0:00"
+        },
+        {
+            "Duration": 9.25,
+            "RollupDate": "9/29/2015 0:00"
+        },
+        {
+            "Duration": 8.65,
+            "RollupDate": "9/28/2015 0:00"
+        },
+        {
+            "Duration": 8.816666667,
+            "RollupDate": "9/27/2015 0:00"
+        },
+        {
+            "Duration": 8.816666667,
+            "RollupDate": "9/26/2015 0:00"
+        },
+        {
+            "Duration": 9.983333333,
+            "RollupDate": "9/25/2015 0:00"
+        },
+        {
+            "Duration": 8.8,
+            "RollupDate": "9/24/2015 0:00"
+        },
+        {
+            "Duration": 8.85,
+            "RollupDate": "9/23/2015 0:00"
+        },
+        {
+            "Duration": 9.783333333,
+            "RollupDate": "9/22/2015 0:00"
+        },
+        {
+            "Duration": 8.733333333,
+            "RollupDate": "9/21/2015 0:00"
+        },
+        {
+            "Duration": 8.85,
+            "RollupDate": "9/20/2015 0:00"
+        },
+        {
+            "Duration": 11.26666667,
+            "RollupDate": "9/19/2015 0:00"
+        },
+        {
+            "Duration": 9.483333333,
+            "RollupDate": "9/18/2015 0:00"
+        },
+        {
+            "Duration": 9.416666667,
+            "RollupDate": "9/17/2015 0:00"
+        },
+        {
+            "Duration": 9.3,
+            "RollupDate": "9/16/2015 0:00"
+        },
+        {
+            "Duration": 8.983333333,
+            "RollupDate": "9/15/2015 0:00"
+        },
+        {
+            "Duration": 9.05,
+            "RollupDate": "9/14/2015 0:00"
+        },
+        {
+            "Duration": 9.566666667,
+            "RollupDate": "9/13/2015 0:00"
+        },
+        {
+            "Duration": 9.3,
+            "RollupDate": "9/12/2015 0:00"
+        },
+        {
+            "Duration": 9.816666667,
+            "RollupDate": "9/11/2015 0:00"
+        },
+        {
+            "Duration": 11.21666667,
+            "RollupDate": "9/10/2015 0:00"
+        },
+        {
+            "Duration": 9.2,
+            "RollupDate": "9/9/2015 0:00"
+        },
+        {
+            "Duration": 8.75,
+            "RollupDate": "9/8/2015 0:00"
+        },
+        {
+            "Duration": 8.866666667,
+            "RollupDate": "9/7/2015 0:00"
+        },
+        {
+            "Duration": 8.716666667,
+            "RollupDate": "9/6/2015 0:00"
+        },
+        {
+            "Duration": 9.1,
+            "RollupDate": "9/5/2015 0:00"
+        },
+        {
+            "Duration": 9.716666667,
+            "RollupDate": "9/4/2015 0:00"
+        },
+        {
+            "Duration": 9.233333333,
+            "RollupDate": "9/3/2015 0:00"
+        },
+        {
+            "Duration": 8.95,
+            "RollupDate": "9/2/2015 0:00"
+        },
+        {
+            "Duration": 8.7,
+            "RollupDate": "9/1/2015 0:00"
+        },
+        {
+            "Duration": 8.533333333,
+            "RollupDate": "8/31/2015 0:00"
+        },
+        {
+            "Duration": 9.1,
+            "RollupDate": "8/30/2015 0:00"
+        },
+        {
+            "Duration": 12.2,
+            "RollupDate": "8/29/2015 0:00"
+        },
+        {
+            "Duration": 9.433333333,
+            "RollupDate": "8/28/2015 0:00"
+        },
+        {
+            "Duration": 10.93333333,
+            "RollupDate": "8/27/2015 0:00"
+        },
+        {
+            "Duration": 8.85,
+            "RollupDate": "8/26/2015 0:00"
+        },
+        {
+            "Duration": 8.966666667,
+            "RollupDate": "8/25/2015 0:00"
+        },
+        {
+            "Duration": 8.5,
+            "RollupDate": "8/24/2015 0:00"
+        },
+        {
+            "Duration": 9.666666667,
+            "RollupDate": "8/23/2015 0:00"
+        },
+        {
+            "Duration": 10.6,
+            "RollupDate": "8/22/2015 0:00"
+        },
+        {
+            "Duration": 9.333333333,
+            "RollupDate": "8/21/2015 0:00"
+        },
+        {
+            "Duration": 10.35,
+            "RollupDate": "8/20/2015 0:00"
+        },
+        {
+            "Duration": 9.95,
+            "RollupDate": "8/19/2015 0:00"
+        },
+        {
+            "Duration": 9.666666667,
+            "RollupDate": "8/18/2015 0:00"
+        },
+        {
+            "Duration": 8.65,
+            "RollupDate": "8/17/2015 0:00"
+        },
+        {
+            "Duration": 8.816666667,
+            "RollupDate": "8/16/2015 0:00"
+        },
+        {
+            "Duration": 9.566666667,
+            "RollupDate": "8/15/2015 0:00"
+        },
+        {
+            "Duration": 9.15,
+            "RollupDate": "8/14/2015 0:00"
+        },
+        {
+            "Duration": 8.9,
+            "RollupDate": "8/13/2015 0:00"
+        },
+        {
+            "Duration": 9.6,
+            "RollupDate": "8/12/2015 0:00"
+        },
+        {
+            "Duration": 9.15,
+            "RollupDate": "8/11/2015 0:00"
+        },
+        {
+            "Duration": 9.15,
+            "RollupDate": "8/10/2015 0:00"
+        }
+    ],
+        "data2": [
+        {
+            "RollupDate": "8/10/2015",
+            "count": 728648
+        },
+        {
+            "RollupDate": "8/12/2015",
+            "count": 918222
+        },
+        {
+            "RollupDate": "8/28/2015",
+            "count": 1055607
+        },
+        {
+            "RollupDate": "9/4/2015",
+            "count": 980965
+        },
+        {
+            "RollupDate": "9/7/2015",
+            "count": 887529
+        },
+        {
+            "RollupDate": "9/8/2015",
+            "count": 1533256
+        },
+        {
+            "RollupDate": "9/14/2015",
+            "count": 1371651
+        },
+        {
+            "RollupDate": "9/16/2015",
+            "count": 592925
+        },
+        {
+            "RollupDate": "9/17/2015",
+            "count": 718243
+        },
+        {
+            "RollupDate": "9/18/2015",
+            "count": 640265
+        },
+        {
+            "RollupDate": "9/19/2015",
+            "count": 547952
+        },
+        {
+            "RollupDate": "9/20/2015",
+            "count": 619800
+        },
+        {
+            "RollupDate": "9/21/2015",
+            "count": 543339
+        },
+        {
+            "RollupDate": "9/22/2015",
+            "count": 951230
+        },
+        {
+            "RollupDate": "9/23/2015",
+            "count": 532407
+        },
+        {
+            "RollupDate": "9/24/2015",
+            "count": 516859
+        },
+        {
+            "RollupDate": "9/25/2015",
+            "count": 596739
+        },
+        {
+            "RollupDate": "9/26/2015",
+            "count": 558877
+        },
+        {
+            "RollupDate": "9/27/2015",
+            "count": 524269
+        },
+        {
+            "RollupDate": "9/28/2015",
+            "count": 936216
+        },
+        {
+            "RollupDate": "9/29/2015",
+            "count": 912974
+        },
+        {
+            "RollupDate": "9/30/2015",
+            "count": 398684
+        },
+        {
+            "RollupDate": "10/2/2015",
+            "count": 594378
+        },
+        {
+            "RollupDate": "10/3/2015",
+            "count": 538876
+        },
+        {
+            "RollupDate": "10/4/2015",
+            "count": 571096
+        },
+        {
+            "RollupDate": "10/7/2015",
+            "count": 992248
+        },
+        {
+            "RollupDate": "10/8/2015",
+            "count": 858075
+        },
+        {
+            "RollupDate": "10/10/2015",
+            "count": 736934
+        },
+        {
+            "RollupDate": "10/11/2015",
+            "count": 699785
+        },
+        {
+            "RollupDate": "10/13/2015",
+            "count": 894153
+        },
+        {
+            "RollupDate": "10/14/2015",
+            "count": 733797
+        },
+        {
+            "RollupDate": "10/19/2015",
+            "count": 1085854
+        },
+        {
+            "RollupDate": "10/20/2015",
+            "count": 704454
+        },
+        {
+            "RollupDate": "10/21/2015",
+            "count": 1299674
+        },
+        {
+            "RollupDate": "10/23/2015",
+            "count": 818324
+        },
+        {
+            "RollupDate": "10/24/2015",
+            "count": 762072
+        },
+        {
+            "RollupDate": "10/25/2015",
+            "count": 73663
+        },
+        {
+            "RollupDate": "10/27/2015",
+            "count": 1098133
+        },
+        {
+            "RollupDate": "10/28/2015",
+            "count": 1207237
+        },
+        {
+            "RollupDate": "10/30/2015",
+            "count": 1431163
+        },
+        {
+            "RollupDate": "10/31/2015",
+            "count": 803828
+        },
+        {
+            "RollupDate": "11/2/2015",
+            "count": 971634
+        },
+        {
+            "RollupDate": "11/3/2015",
+            "count": 920065
+        },
+        {
+            "RollupDate": "11/4/2015",
+            "count": 929581
+        },
+        {
+            "RollupDate": "11/5/2015",
+            "count": 10987000
+        },
+        {
+            "RollupDate": "11/7/2015",
+            "count": 11135870
+        },
+        {
+            "RollupDate": "11/9/2015",
+            "count": 12133073
+        },
+        {
+            "RollupDate": "11/11/2015",
+            "count": 11081202
+        },
+        {
+            "RollupDate": "11/13/2015",
+            "count": 11306150
+        },
+        {
+            "RollupDate": "11/15/2015",
+            "count": 11421061
+        },
+        {
+            "RollupDate": "11/17/2015",
+            "count": 11422020
+        },
+        {
+            "RollupDate": "11/19/2015",
+            "count": 11597616
+        },
+        {
+            "RollupDate": "11/21/2015",
+            "count": 11754185
+        },
+        {
+            "RollupDate": "11/26/2015",
+            "count": 11975068
+        },
+        {
+            "RollupDate": "11/28/2015",
+            "count": 12799045
+        },
+        {
+            "RollupDate": "11/29/2015",
+            "count": 614332
+        },
+        {
+            "RollupDate": "11/30/2015",
+            "count": 566064
+        },
+        {
+            "RollupDate": "12/3/2015",
+            "count": 12300225
+        },
+        {
+            "RollupDate": "12/5/2015",
+            "count": 12413572
+        },
+        {
+            "RollupDate": "12/7/2015",
+            "count": 12471969
+        },
+        {
+            "RollupDate": "12/9/2015",
+            "count": 12505219
+        },
+        {
+            "RollupDate": "12/11/2015",
+            "count": 12613291
+        },
+        {
+            "RollupDate": "12/29/2015",
+            "count": 13262054
+        },
+        {
+            "RollupDate": "12/30/2015",
+            "count": 830187
+        },
+        {
+            "RollupDate": "12/31/2015",
+            "count": 2078726
+        },
+        {
+            "RollupDate": "1/3/2016",
+            "count": 954308
+        },
+        {
+            "RollupDate": "1/5/2016",
+            "count": 13411891
+        },
+        {
+            "RollupDate": "1/7/2016",
+            "count": 13439913
+        },
+        {
+            "RollupDate": "1/11/2016",
+            "count": 13646867
+        },
+        {
+            "RollupDate": "1/14/2016",
+            "count": 1391550
+        },
+        {
+            "RollupDate": "1/21/2016",
+            "count": 16286444
+        },
+        {
+            "RollupDate": "1/23/2016",
+            "count": 13466410
+        },
+        {
+            "RollupDate": "1/25/2016",
+            "count": 13521400
+        },
+        {
+            "RollupDate": "1/26/2016",
+            "count": 2940089
+        }
+    ]
+}

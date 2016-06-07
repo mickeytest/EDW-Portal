@@ -1,0 +1,65 @@
+{
+    "Yotta": {
+        "Ticket": 12,
+        "CloseTicket":4,
+        "CR":0,
+        "MTP":1
+    },
+    "Sequest": {
+        "Ticket": 501,
+        "CloseTicket": 501,
+        "PDM": 20
+
+    },
+    "UAM": {
+        "Tickets": 100,
+        "CancelTicketTTF": 4,
+        "NotReproduce": 16,
+        "OOS": 10,
+        "MisRouted": 30,
+        "Resolved": 40,
+        "NoResponse":3,
+        "CRs": 30,
+        "NotShared": 3,
+        "BOE": 7,
+        "QV": 20
+    },
+    "DQ": {
+        "Tickets": 90,
+        "CloseTicket": 60,
+        "PendingTicket":15,
+        "OpenTicket": 15,
+        "TicketIMIT": 100,
+        "TicketSSIT": 80,
+        "ClosedPercentage": 100
+    },
+    "CM": {
+        "TTFMTPReview": 10,
+        "TTFBFX": 100,
+        "AVGRFC": 20,
+        "AVGBFX": 20
+    },
+    "DevOncall": {
+        "TTOMEC": 100,
+        "TTFMEC": 85,
+        "TTONonMEC": 100,
+        "TTFError": 95,
+        "Total": 124,
+        "TotalMEC": 94,
+        "TotalNonMEC": 30
+    },
+    "RMT": {
+        "Tickets": 60,
+        "MTIRequest": 95,
+        "MTDQR": 1,
+        "TTO": 90,
+        "TTF": 90
+    },
+    "OnBoarding": {
+        "FileLoadingRequest": 10,
+        "FileLoad": 50,
+        "FileLoadSharePoint": 1,
+        "Within1hours": 20,
+        "Within2days": 100
+    }
+}

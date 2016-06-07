@@ -1,0 +1,240 @@
+{
+    "classtrend": [
+        {
+            "title": "classify",
+            "data": [
+                [
+                    0,
+                    14
+                ],
+                [
+                    1,
+                    9
+                ],
+                [
+                    2,
+                    18
+                ]
+            ]
+        }
+    ],
+    "classdilldowncategories": [
+        null,
+        "ETL Script Issue",
+        "Data Quality Issue",
+        "Invalid",
+        "Optimization",
+        "TSA Development Enhancement",
+        "Data Extract",
+        "Process",
+        "Dial Platform Issue",
+        "Documentation"
+    ],
+    "classdilldowndate": [
+        [
+            null,
+            3,
+            1,
+            1,
+            5,
+            null,
+            2,
+            null,
+            null,
+            2
+        ],
+        [
+            null,
+            3,
+            null,
+            null,
+            5,
+            1,
+            null,
+            null,
+            null,
+            null
+        ],
+        [
+            null,
+            null,
+            null,
+            null,
+            4,
+            1,
+            13,
+            null,
+            null,
+            null
+        ]
+    ],
+    "categories": [
+        "Jan, 2016",
+        "Feb, 2016",
+        "Mar, 2016"
+    ],
+    "StatusTrend": [
+        {
+            "title": "Completed",
+            "data": [
+                [
+                    0,
+                    16
+                ],
+                [
+                    1,
+                    11
+                ],
+                [
+                    2,
+                    24
+                ]
+            ]
+        },
+        {
+            "title": "In Progress",
+            "data": [
+                [
+                    0,
+                    22
+                ],
+                [
+                    1,
+                    22
+                ],
+                [
+                    2,
+                    22
+                ]
+            ]
+        },
+        {
+            "title": "Others",
+            "data": [
+                [
+                    0,
+                    13
+                ],
+                [
+                    1,
+                    14
+                ],
+                [
+                    2,
+                    13
+                ]
+            ]
+        }
+    ],
+    "ChangeTypeTrend": [
+        {
+            "title": "Bug Fixing",
+            "data": [
+                [
+                    0,
+                    14
+                ],
+                [
+                    1,
+                    13
+                ],
+                [
+                    2,
+                    14
+                ]
+            ]
+        },
+        {
+            "title": "Optimization",
+            "data": [
+                [
+                    0,
+                    13
+                ],
+                [
+                    1,
+                    13
+                ],
+                [
+                    2,
+                    10
+                ]
+            ]
+        },
+        {
+            "title": "TSA",
+            "data": [
+                [
+                    0,
+                    7
+                ],
+                [
+                    1,
+                    6
+                ],
+                [
+                    2,
+                    6
+                ]
+            ]
+        },
+        {
+            "title": "Others",
+            "data": [
+                [
+                    0,
+                    14
+                ],
+                [
+                    1,
+                    12
+                ],
+                [
+                    2,
+                    25
+                ]
+            ]
+        }
+    ],
+    "longrunning": [
+        {
+            "title": "Long Running Jobs",
+            "data": [
+                [
+                    0,
+                    1743
+                ],
+                [
+                    1,
+                    2054
+                ],
+                [
+                    2,
+                    1956
+                ]
+            ]
+        }
+    ],
+    "longrunningcategories": [
+        "ZEO",
+        "JAD",
+        "EMR"
+    ],
+    "longrunningdrilldown": [
+        [
+            557,
+            588,
+            598
+        ],
+        [
+            739,
+            794,
+            521
+        ],
+        [
+            631,
+            521,
+            804
+        ]
+    ]
+}

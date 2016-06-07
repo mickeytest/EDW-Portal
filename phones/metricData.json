@@ -1,0 +1,66 @@
+{
+    "rollupRun": {
+        "name": "Rollup Run Time",
+        "MEC": [56,
+            12,
+            34
+            ],
+        "NonMEC": [
+            34,
+            45,
+            12
+        ]
+    },
+    "rollupDelay": {
+        "name": "Rollup Delay Time",
+        "MEC": [
+            23,
+            45,
+            78
+        ],
+        "NonMEC": [
+            24,
+            34,
+            38
+        ]
+    },
+    "ticketDuration": {
+        "name": "Ticket Life Duration",
+        "MEC": [
+            55,
+            33
+        ],
+        "NonMEC": [
+            34,
+            17
+        ]
+    },
+    "ticket": {
+        "name": "Ticket Total",
+        "total": 145,
+        "avg": 29,
+        "data": [
+            {
+                "x": "2015-32",
+                "y": 20
+            },
+            {
+                "x": "2015-33",
+                "y": 52
+            },
+            {
+                "x": "2015-34",
+                "y": 20
+            },
+            {
+                "x": "2015-35",
+                "y": 52
+            }
+        ]
+    },
+    "help": {
+        "name": "Need SME Help",
+        "YES": 270,
+        "NO": 30
+    }
+}

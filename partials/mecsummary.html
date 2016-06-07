@@ -1,0 +1,144 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">Rollup Status During MEC </h1> 
+           
+        </div>
+    </div>
+
+
+    <div class="row">&nbsp;</div>
+      <div class="row" >
+        <div class="col-lg-12">
+        <div class="content" style="margin:.5em">
+                <p class="col-lg-6 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM" ng-model="dt1" is-open="opened1" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions1" datepicker-mode="'month'" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" placeholder="MEC Month"/>
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened1')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+        </div>
+          </div>
+      </div>
+
+  	<div class="row" >
+  	<div class="col-lg-12">
+  		<table class="ui celled structured table" style="margin:.5em">
+		  <thead>
+		    <tr>
+		        <th rowspan="2">Instance</th>
+		        <th  ng-repeat="week in data.weeks" rowspan="2">{{week.t}}</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>APJ (JAD)</td>
+		      <td ng-repeat= "apj in data.JAD " ng-click="clickitem($index,'JAD')"> 
+		      <div ng-class="(selectIndex==$index && selectenv=='JAD')?'ui  ribbon  label':''">
+			      <i ng-class="apj.t==''? '': (apj.d==''? 'right floated green wait icon':'right floated red wait icon')"></i>{{apj.d}}
+			      <i ng-class="apj.t==''? '': (apj.o==true? 'right floated green check circle icon' : 'right floated red remove  circle icon')" ></i>{{apj.t}}
+				</div>
+		      </td>
+		     
+		    </tr>
+		   	<tr>
+		      <td>EMEA (ZEO)</td>
+
+		       <td ng-repeat= "apj in data.ZEO " ng-click="clickitem($index,'ZEO')"> 
+		          	<div ng-class="(selectIndex==$index && selectenv=='ZEO')?'ui  ribbon  label':''">
+				      <i ng-class="apj.t==''? '': (apj.d==''? 'right floated green wait icon':'right floated red wait icon')"></i>{{apj.d}}
+				      <i ng-class="apj.t==''? '': (apj.o==true? 'right floated green check circle icon' : 'right floated red remove  circle icon')"></i>{{apj.t}}
+		    		</div>
+
+		    	</td>
+		    </tr>
+		    <tr>
+		      <td>AMS (EMR)</td>
+		 		 <td ng-repeat= "apj in data.EMR " ng-click="clickitem($index,'EMR')"> 
+		 		 <div ng-class="(selectIndex==$index && selectenv=='EMR')?'ui   ribbon  label':''">
+				      <i ng-class="apj.t==''? '': (apj.d==''? 'right floated green wait icon':'right floated red wait icon')"></i>{{apj.d}}
+				      <i ng-class="apj.t==''? '': (apj.o==true? 'right floated green check circle icon' : 'right floated red remove  circle icon')"></i>{{apj.t}}
+				</div>
+				</td>
+		    
+		    </tr>
+		
+		  </tbody>
+		</table>
+	</div>
+	 </div>
+
+	     <div class="row">&nbsp;</div>
+    <div class="row">
+    	<div class="col-lg-12">
+	       <div class="ui one column cards">
+		      	<div class="ui card">
+					  <div class="content">
+					    <div class="header">JAD</div>
+					    <div class="description">
+					    <abc ng-repeat="c in detaildata.JADCOMMENT">•	 {{c.c}}<br></abc>
+						   
+						</div>
+					  </div>
+					  <div class="extra content">
+					    <span class="left floated like">
+					   
+					     <i ng-class="detaildata.JADTIME=='Not Started'? '': (detaildata.JADMEET? 'right floated green check circle icon':'right floated red remove circle icon')"></i>
+					      {{detaildata.JADTIME}}&nbsp;&nbsp;&nbsp;&nbsp;
+					    </span>
+
+					  </div>
+				</div>
+			    <div class="ui card">
+					<div class="content">
+					    <div class="header">ZEO</div>
+					    <div class="description">
+						      <abc ng-repeat="c in detaildata.ZEOCOMMENT">•	 {{c.c}}<br></abc>
+						</div>
+					  </div>
+					  <div class="extra content">
+					    <span class="left floated like">
+					      <i ng-class="detaildata.ZEOTIME=='Not Started'? '': (detaildata.ZEOMEET? 'right floated green check circle icon':'right floated red remove circle icon')"></i>
+					       {{detaildata.ZEOTIME}}&nbsp;&nbsp;&nbsp;&nbsp;
+					    </span>
+
+					  </div>
+				</div>
+				<div class="ui card">
+					  <div class="content">
+					    <div class="header">EMR</div>
+					    <div class="description"> 
+						      <abc ng-repeat="c in detaildata.EMRCOMMENT">•	 {{c.c}}<br></abc>
+						</div>
+					  </div>
+					  <div class="extra content">
+					    <span class="left floated like">
+					      <i ng-class="detaildata.EMRTIME=='Not Started'? '': (detaildata.EMRMEET? 'right floated green check circle icon':'right floated red remove circle icon')"></i>
+					     {{detaildata.EMRTIME}}&nbsp;&nbsp;&nbsp;&nbsp;
+					    </span>
+
+					  </div>
+				</div>
+				<div class="ui card">
+					  <div class="content">
+					    <div class="header">Yotta</div>
+					    <div class="description">
+					     <abc ng-repeat="c in detaildata.YOTTACOMMENT">•	 {{c.c}}<br></abc>
+					    </div>
+					  </div>
+				</div>
+			    <div class="ui card">
+					<div class="content">
+					    <div class="header">Major Incidents/Other Status</div>
+					    <div class="description">
+					      <abc ng-repeat="c in detaildata.OTHERCOMMENT">•	 {{c.c}}<br></abc>
+					    </div>
+					  </div>
+				</div>
+	      </div>
+	    </div>
+     </div>
+  </div>
+</div>

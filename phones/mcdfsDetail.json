@@ -1,0 +1,29 @@
+[
+    {
+        "SOURCECODE": "30",
+        "SOURCENAME": "VELOCITY",
+        "EPRID": "113562",
+        "PORTFOLIO": "FIN",
+        "DATASUBJECT": "BILL",
+        "FILETS": "20160502.054355",
+        "VALUE": 5
+    },
+    {
+        "SOURCECODE": "30",
+        "SOURCENAME": "PPM WFM",
+        "EPRID": "113562",
+        "PORTFOLIO": "FIN",
+        "DATASUBJECT": "BILL",
+        "FILETS": "20160502.054355",
+        "VALUE": 5
+    },
+    {
+        "SOURCECODE": "30",
+        "SOURCENAME": "PPM WFM",
+        "EPRID": "113562",
+        "PORTFOLIO": "FIN",
+        "DATASUBJECT": "BILL",
+        "FILETS": "20160502.054355",
+        "VALUE": 5
+    }
+]

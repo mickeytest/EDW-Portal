@@ -1,0 +1,58 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <!--Body content-->
+            <h2>Sidebar</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sapien at purus lacinia, ac accumsan justo consequat. </p>
+            
+            <div>
+            <chart value='charts'  height="400" chartobj='chartObj'>
+            </chart>
+           </div>
+
+           <div>
+        <!--Body content-->
+            <p>Curabitur eget sollicitudin nisi. Curabitur dapibus at mi a elementum. Nullam ut nisi diam. Nulla ac enim feugiat, imperdiet dolor a, commodo ipsum.</p>
+
+        </div>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table table-bordered table-hover">
+         <thead>
+            <tr>
+                <th>EventID</th>
+                <th>Level</th>
+                <th>Subject</th>
+                <th>Start_TS</th>
+                <th>Batch_ID</th>
+                <th>Minimum</th>
+                <th>Maximum</th>
+                <th>Average</th>
+                <th>Duration</th>
+                <th>Delta</th>
+                <th>Running Total</th>
+            </tr>
+        </thead>
+         <tbody>
+                <tr ng-repeat="chart in charts">
+                    <td>{{chart.EventID}}</td>
+                    <td>{{chart.Level}}</td>
+                    <td>{{chart.Subject}}</td>
+                    <td>{{chart.Start_TS}}</td>
+                    <td>{{chart.Batch_ID}}</td>
+                    <td>{{chart.Minimum}}</td>
+                    <td>{{chart.Maximum}}</td>
+                    <td>{{chart.Average}}</td>
+                    <td>{{chart.Duration}}</td>
+                    <td>{{chart.Delta}}</td>
+                    <td>{{chart.Running_Total}}</td>
+                </tr>
+        </tbody>    
+      </table>   
+    </div>
+  </div>    
+  </div>
+</div> 

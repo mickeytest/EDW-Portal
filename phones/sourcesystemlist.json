@@ -1,0 +1,174 @@
+[
+    {
+        "value": "ALL",
+        "id": 1
+    },
+    {
+        "value": "CABS",
+        "id": 2
+    },
+    {
+        "value": "CCRODS",
+        "id": 3
+    },
+    {
+        "value": "CCS",
+        "id": 4
+    },
+    {
+        "value": "CID CCS",
+        "id": 5
+    },
+    {
+        "value": "EG SAP PJ1 APJ",
+        "id": 6
+    },
+    {
+        "value": "EG SAP PN1 Americas",
+        "id": 7
+    },
+    {
+        "value": "EG SAP PO1 EMEA",
+        "id": 8
+    },
+    {
+        "value": "EG SAP PPC",
+        "id": 9
+    },
+    {
+        "value": "EIFFEL-AP-CA-LA",
+        "id": 10
+    },
+    {
+        "value": "EIFFEL-EMEA",
+        "id": 11
+    },
+    {
+        "value": "EIFFEL-US",
+        "id": 12
+    },
+    {
+        "value": "ESSAPBWHANA",
+        "id": 13
+    },
+    {
+        "value": "Fusion Americas",
+        "id": 14
+    },
+    {
+        "value": "Fusion APJ",
+        "id": 15
+    },
+    {
+        "value": "Fusion EMEA",
+        "id": 16
+    },
+    {
+        "value": "GCSS-IM",
+        "id": 17
+    },
+    {
+        "value": "HHO",
+        "id": 18
+    },
+    {
+        "value": "HPFS Flexi GL",
+        "id": 19
+    },
+    {
+        "value": "HRBW",
+        "id": 20
+    },
+    {
+        "value": "ICOST",
+        "id": 21
+    },
+    {
+        "value": "JDED",
+        "id": 22
+    },
+    {
+        "value": "LHBCS",
+        "id": 23
+    },
+    {
+        "value": "LHGLBW",
+        "id": 24
+    },
+    {
+        "value": "Partner Pro-AM",
+        "id": 25
+    },
+    {
+        "value": "Partner Pro-APJ",
+        "id": 26
+    },
+    {
+        "value": "Partner Pro-EMEA",
+        "id": 27
+    },
+    {
+        "value": "PHWEB",
+        "id": 28
+    },
+    {
+        "value": "POLARIS",
+        "id": 29
+    },
+    {
+        "value": "PPM WFM",
+        "id": 30
+    },
+    {
+        "value": "SAIL",
+        "id": 31
+    },
+    {
+        "value": "SAP BW Nucleus-AMER",
+        "id": 32
+    },
+    {
+        "value": "SAP BW Nucleus-APJ",
+        "id": 33
+    },
+    {
+        "value": "SAP BW Nucleus-EMEA",
+        "id": 34
+    },
+    {
+        "value": "SCITS ID-3200",
+        "id": 35
+    },
+    {
+        "value": "SCITS ID-5200",
+        "id": 36
+    },
+    {
+        "value": "SCITS ID-NK00",
+        "id": 37
+    },
+    {
+        "value": "SCOUT",
+        "id": 38
+    },
+    {
+        "value": "TRIATON",
+        "id": 39
+    },
+    {
+        "value": "VELOCITY",
+        "id": 40
+    },
+    {
+        "value": "VISTA",
+        "id": 41
+    },
+    {
+        "value": "WWCOA",
+        "id": 42
+    },
+    {
+        "value": "Yotta",
+        "id": 43
+    }
+]

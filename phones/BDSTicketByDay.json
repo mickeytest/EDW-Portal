@@ -1,0 +1,152 @@
+{
+    "data": [
+        {
+            "name": "Sep,1",
+            "y": 11,
+            "drilldown": "Sep,1"
+        },
+        {
+            "name": "Sep,2",
+            "y": 32,
+            "drilldown": "Sep,2"
+        },
+        {
+            "name": "Sep,3",
+            "y": 23,
+            "drilldown": "Sep,3"
+        },
+        {
+            "name": "Sep,4",
+            "y": 14,
+            "drilldown": "Sep,4"
+        },
+        {
+            "name": "Sep,5",
+            "y": 43,
+            "drilldown": "Sep,5"
+        }
+    ],
+    "drilldown": [
+        {
+            "id": "Sep,1",
+            "data": [
+               [
+                    "TTE: 0-5 mins",
+                    2
+                ],
+                [
+                    "TTE: 6-10 mins",
+                    3
+                ],
+                [
+                    "TTE: 11-30 mins",
+                    2
+                ],
+                [
+                    "TTE: 30-60 mins",
+                    1
+                ],
+                [
+                    "TTE: >60 mins",
+                    0
+                ]
+            ]
+        },        {
+            "id": "Sep,2",
+            "data": [
+               [
+                    "TTE: 0-5 mins",
+                    2
+                ],
+                [
+                    "TTE: 6-10 mins",
+                    3
+                ],
+                [
+                    "TTE: 11-30 mins",
+                    2
+                ],
+                [
+                    "TTE: 30-60 mins",
+                    1
+                ],
+                [
+                    "TTE: >60 mins",
+                    0
+                ]
+            ]
+        },        {
+            "id": "Sep,3",
+            "data": [
+               [
+                    "TTE: 0-5 mins",
+                    2
+                ],
+                [
+                    "TTE: 6-10 mins",
+                    3
+                ],
+                [
+                    "TTE: 11-30 mins",
+                    2
+                ],
+                [
+                    "TTE: 30-60 mins",
+                    1
+                ],
+                [
+                    "TTE: >60 mins",
+                    0
+                ]
+            ]
+        },        {
+            "id": "Sep,4",
+            "data": [
+                [
+                    "TTE: 0-5 mins",
+                    2
+                ],
+                [
+                    "TTE: 6-10 mins",
+                    3
+                ],
+                [
+                    "TTE: 11-30 mins",
+                    2
+                ],
+                [
+                    "TTE: 30-60 mins",
+                    1
+                ],
+                [
+                    "TTE: >60 mins",
+                    0
+                ]
+            ]
+        },        {
+            "id": "Sep,5",
+            "data": [
+               [
+                    "TTE: 0-5 mins",
+                    2
+                ],
+                [
+                    "TTE: 6-10 mins",
+                    3
+                ],
+                [
+                    "TTE: 11-30 mins",
+                    2
+                ],
+                [
+                    "TTE: 30-60 mins",
+                    1
+                ],
+                [
+                    "TTE: >60 mins",
+                    0
+                ]
+            ]
+        }
+    ]
+}

@@ -1,0 +1,315 @@
+<style type="text/css">
+$('.ui.dropdown')
+  .dropdown()
+;
+</style>
+
+<div id="page-wrapper" >
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">Rollup SLA Status </h1> 
+           
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div>
+
+      <div class="row">
+          <div class="col-lg-12">
+          <div  class="ui form">
+            <div class="inline fields">
+              <label>Environment:</label>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input  type="radio" name="env" value= "ZEO" ng-model="env">
+                  <label>ZEO</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input type="radio" name="env" value= "EMR" ng-model="env">
+                  <label>EMR</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input type="radio" name="env"  value= "JAD" ng-model="env">
+                  <label>JAD</label>
+                </div>
+              </div>
+               <div class="field">
+                <div class="ui slider checkbox">
+                  <input type="radio" name="env"  value= "ALL" ng-model="env">
+                  <label>ALL PRO</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+       </div>
+
+      <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup SLA Status</h3>
+                    </div>
+                    <div  class="panel-body">
+                        <chart value='rollupsla1' height="400" chartobj='chartObj'>
+                        </chart>           
+                    </div>
+                </div>
+            </div>
+      </div>
+
+
+      <div class="row">
+          <div class="col-lg-3">
+             <label class="control-label pull-left" ><font style="font-size: 90%">{{title}} </font></label>
+             
+          </div>
+           <div class="col-lg-9">
+           <button type="button" class="btn btn-default" ng-click="clickMonthFilter()"><i class="fa fa-search-plus"></i>  Month Filter</button>
+            <button type="button" class="btn btn-default" ng-click="clickDateFilter()"><i class="fa fa-search-plus"></i>  Date Filter</button>
+            <button type="button" class="btn btn-default" ng-click="openLastest()" ><i class="fa fa-undo" ></i>  Revert Filter</button>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div>
+      
+      <div class="row" uib-collapse="isMonthCollapsed">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+             <div class="col-lg-6">
+              <label class="col-lg-3 control-label text-right" ><font style="font-size: 140%">MEC Month:</font></label>
+                <p class="col-lg-9 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM" ng-model="dt1" is-open="opened1" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions1" datepicker-mode="'month'" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened1')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+              </div>
+            </div>
+           </div>
+          </div>
+      </div>
+
+      <div class="row" uib-collapse="isDateCollapsed">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">  
+              <div class="col-lg-5">
+                  <label class="col-lg-2 control-label text-right" ><font style="font-size: 140%">From:</font></label>
+                <p class="col-lg-10 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt2" is-open="opened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions2" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened2')" ><i class="glyphicon glyphicon-calendar"></i></button> 
+                  </span>
+                </p>
+              </div>
+              <div class="col-lg-5">
+                 <label class="col-lg-2 control-label text-right" ><font style="font-size: 140%">To:  </font></label>
+                 <p class="col-lg-10 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt3" is-open="opened3" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions3"  date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened3')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+              </div>
+              <div class="col-lg-2">
+                   <button type="button" class="btn btn-default" ng-click="viewDate()"><i class="fa fa-hand-o-right"></i> View</button> 
+              </div>
+            </div>
+           </div>
+          </div>
+      </div>
+
+
+      <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup SLA Status  </h3>
+                    </div>
+                    <div  class="panel-body">                 
+                        <chart value='rollupsla2' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup SLA Status 
+                        </h3>
+                    </div>
+                    <div  class="panel-body" style="width: auto">               
+                      <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                        <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <chart value='slide.chart' height="400" chartobj='chartObj' >
+                         </chart>
+               
+                        </uib-slide>
+                      </uib-carousel>
+                           
+                    </div>
+                </div>
+            </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-4" >
+          <div class="panel panel-default">  
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>  MEC Total: {{rollupTotalMec}} | Meet: {{rollupMeetMec}} | Miss: {{rollupDelayMec}} </h3>
+                </div>             
+              <div class="panel-body">
+                   <chart value='mychart3'  chartobj='chartObj'>
+                   </chart>
+              </div>
+          </div>
+        </div>
+                <div class="col-lg-4" >
+          <div class="panel panel-default"> 
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>  Non-MEC Total: {{rollupTotalNonMec}} | Meet: {{rollupMeetNonMec}} | Miss: {{rollupDelayNonMec}} </h3>
+                </div>             
+              <div class="panel-body">
+                   <chart value='mychart4' chartobj='chartObj'>
+                   </chart>
+              </div>
+          </div>
+        </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup SLA Status</h3>
+                    </div>
+                    <div  class="panel-body">                      
+                        <chart value='rollupsla3' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+      </div>
+        <!-- /.row -->
+      <div class="row">&nbsp;</div>
+      <h1><small><p class="text-info" ><b>SLA Breach:</b></p></small></h1>
+      <div class="row" >
+            <div class="col-lg-12">
+             
+               <table class="table table-bordered table-hover"  >
+               <thead>
+                  <tr>
+                   <th class="col-lg-1" ng-click="sort('Date')">Date
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='Date'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>   
+                    <th class="col-lg-1" ng-click="sort('Environment')">Environment
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='Environment'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>                                   
+                   <th class="col-lg-1" ng-click="sort('StartOnTime')">Start On Time
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='StartOnTime'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                   <th class="col-lg-2" ng-click="sort('DelayReason')">Delay Reason
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='DelayReason'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+
+                     <th class="col-lg-1" ng-click="sort('SLAMeet')">SLA Meet
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='SLAMeet'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th class="col-lg-2" ng-click="sort('SLAMissReason')">SLA Miss Reason
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='SLAMissReason'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th class="col-lg-4" ng-click="sort('Comments')">Comments
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='Comments'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                  </tr>
+              </thead>
+               <tbody>
+                      <tr ng-repeat="event in slabreaches" >
+                          <td>{{event.Date}}</td>
+                          <td>{{event.Environment}}</td>
+                          <td><i ng-class="event.StartOnTime=='Yes'? 'green check circle icon':'red remove circle icon'"></i></td>            
+                          <td>{{event.DelayReason}}</td>
+                          <td><i ng-class="event.SLAMeet=='Yes'? 'green check circle icon':'red remove circle icon'"></i></td>  
+                          <td>{{event.SLAMissReason}}</td>
+                          <td>{{event.Comments}}</td>                         
+                        </tr>
+              </tbody>    
+             </table>                   
+            </div>
+      </div>
+  
+      <h1><small><p class="text-info" ><b>Rollup SLA Detailed:</b></p></small></h1>
+      <div class="row" class="table-responsive">
+         <div class="col-lg-9 ">
+           <label>Items per page:</label>
+           <label class="checkbox-inline">
+              <input type="number" min="1" class="form-control" ng-model="pageSize">
+          </label>
+        
+         </div>  
+         <div class="col-lg-3 pull-right">
+           <label>Search:</label>
+            <label class="checkbox-inline">
+              <input id="query" class="form-control"  ng-model="query" ng-change="change()">
+           </label>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div> 
+      <div class="row" >
+        <div class="col-lg-12">
+            <table class="table table-bordered table-hover"  >
+                 <thead>
+                    <tr>
+                     <th class="col-lg-1" ng-click="sort('Date')">Rollup Date
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='Date'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>   
+                      <th class="col-lg-1" ng-click="sort('Environment')">Environment
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='Environment'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>                                   
+                     <th class="col-lg-1" ng-click="sort('Week')">Days Of Week
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='Week'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>
+                     <th class="col-lg-1" ng-click="sort('StartTime')">Start Time
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='StartTime'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>
+
+                       <th class="col-lg-1" ng-click="sort('EndTime')">End Time
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='EndTime'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>
+                       <th class="col-lg-1" ng-click="sort('SLAStatus')">SLA Status
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='SLAStatus'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>
+                       <th class="col-lg-1" ng-click="sort('SLAMissReason')">SLA Miss Reason
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='SLAMissReason'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>                    
+                       <th class="col-lg-1" ng-click="sort('T15Mins')">T-15Mins
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='T15Mins'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                      </th>               
+                    </tr>
+                </thead>
+                 <tbody>
+                        <tr dir-paginate="job in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize" >
+                            <td>{{job.Date}}</td>
+                            <td>{{job.Environment}}</td>
+                            <td>{{job.Week}}</td>
+                            <td>{{job.StartTime}}</td>
+                            <td>{{job.EndTime}}</td>
+                            <td><i ng-class="job.SLAStatus=='Meet'? 'green check circle icon':'red remove circle icon'"></i></td>
+                            <td>{{job.SLAMissReason}}</td>                         
+                            <td>{{job.T15Mins}}{{job.T15Mins != 'N/A'? ' Mins':''}}</td>                         
+                          </tr>
+                </tbody>    
+              </table> 
+              <uib-pagination ng-show="total" direction-links="true" boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+        </div>   
+      </div>
+  </div>
+</div>

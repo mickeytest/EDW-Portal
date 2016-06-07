@@ -1,0 +1,119 @@
+<div id="page-wrapper">
+  <div class="container-fluid" >
+
+
+                <!-- Page Heading -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="ui dividing header animated bounceInRight">
+                  Request Handler
+              </h1>
+          </div>
+      </div>
+      <div class="row">&nbsp;</div>
+
+    <div class="row" >
+       <div class="col-lg-9 ">
+         <label>Items per page:</label>
+         <label class="checkbox-inline">
+            <input type="number" min="1" max="100" class="form-control" ng-model="pageSize">
+        </label>
+      
+       </div>  
+       <div class="col-lg-3 pull-right" >
+         <label>Search:</label>
+          <label class="checkbox-inline">
+            <input type="text" class="form-control" id="query" ng-model="query" ng-change="change()">
+         </label>
+        </div>
+     </div>
+   <div class="row">&nbsp;</div>
+       <div class="row">
+          <div class="col-lg-12">
+            <table class="ui celled structured table">
+              <thead>
+                <tr>
+                  <th class="col-sm-1 center aligned" rowspan="2">Action</th>
+                  <th class="center aligned" rowspan="2" ng-click="sort('requestid')">Request ID
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='requestid'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th rowspan="2" ng-click="sort('name')">Email
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th rowspan="2" ng-click="sort('username')">User Name
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='username'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th rowspan="2" >Description
+                  </th>
+                  <th rowspan="2" ng-click="sort('RequestTime')">Request Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='RequestTime'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th class="center aligned" colspan="3" >Category                  
+                  </th>
+                  <th rowspan="2" ng-click="sort('Status')">Status
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='Status'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th rowspan="2" ng-click="sort('Approver')">Approver
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='Approver'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th rowspan="2" ng-click="sort('ApproveTime')">Approve Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='ApproveTime'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                </tr>
+                    <tr>
+                      <th>Rollup Status</th>
+                      <th>SLA Metrics</th>
+                      <th>EDW Baseline</th>
+                    </tr>
+              </thead>
+              <tbody>
+                  <tr dir-paginate="event in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize">
+                  <td class="collapsing ">
+                    <div class="ui fitted slider toggle checkbox ">
+                      <input type="checkbox" ng-disabled="event.Status=='Approved'" ng-model="event.toApprove"> <label></label>
+                    </div>
+                  </td>
+                  <td>{{event.requestid}}</td>
+                  <td>{{event.email}}</td>
+                  <td>{{event.username}}</td>
+                  <td>{{event.description}}</td>
+                  <td>{{event.RequestTime}}</td>
+                  <td class="center aligned">
+                    <i ng-class="event.category.userRollupStatus ? 'large green checkmark icon':'large red remove icon'"></i>
+                  </td> 
+                   <td class="center aligned">
+                    <i ng-class="event.category.userSlaMetrics ? 'large green checkmark icon':'large red remove icon'"></i>
+                  </td>
+                   <td class="center aligned">
+                    <i ng-class="event.category.userEdwBaseline ? 'large green checkmark icon':'large red remove icon'"></i>
+                  </td>    
+                   <td>{{event.Status}}</td>     
+                  <td>{{event.Approver}}</td>
+                  <td>{{event.ApproveTime}}</td>
+                 
+                </tr>
+
+              </tbody>
+              <tfoot class="full-width">
+                <tr>
+                  <th></th>
+                  <th colspan="12">
+        
+                    
+                    <div class="ui fluid floated input">
+                      <input type="text" placeholder="Approver Name" ng-model="approvename">
+                      <div class="ui right floated  button" ng-click="submit()">
+                      <i class="user icon" ></i> Approve All
+                     </div>
+                    </div>
+                    
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
+                  <uib-pagination ng-show="total" direction-links="true"  boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+          </div>
+       </div>
+
+  </div>
+</div>

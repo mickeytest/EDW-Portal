@@ -1,0 +1,120 @@
+<script type="text/javascript">
+$('.button')
+  .popup({
+    inline: true
+  })
+;
+</script>
+<div id="page-wrapper" >
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">Detailed MID Status</h1> 
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+         <div class="row">
+           <div class="col-lg-9">
+           <button type="button" class="btn btn-default" ng-click="toSearch = !toSearch"><i class="fa fa-search-plus"></i>  Search</button>
+             <a href = "{{baseURL}}/#/cpm/{{env}}/{{date}}" class="btn btn-default" role="button" ng-show="showback"><i class="fa fa-undo"></i> Back to CP</a>
+          </div>
+        </div>
+        <div class="row" uib-collapse="toSearch">
+          <div class="col-lg-12">
+            <div class="panel panel-default">
+              <div class="panel-body"> 
+                <div class="col-lg-12">    
+                  <div class="col-lg-5">
+                       <label class="col-lg-5 control-label text-left"><font style="font-size: 140%">Environment:</font></label>
+                         <p class="col-lg-7 input-group " >
+                          <label class="radio-inline">
+                            <input type="radio" value= "BER"  ng-model="env" >
+                            ITG           
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" value= "ZEO"  ng-model="env1" >
+                             ZEO
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" value= "EMR" ng-model="env1" >
+                             EMR
+                          </label >
+                          <label class="radio-inline">
+                            <input type="radio" value= "JAD"  ng-model="env1" >
+                             JAD
+                          </label>   
+                        </p>
+                  </div>
+
+                  <div class="col-lg-12" >    
+                      <div class="col-lg-6"  >
+                           <label class="col-lg-4 control-label text-left"><font style="font-size: 140%">Event ID:</font></label>
+                           <p class="col-lg-8 input-group " mass-autocomplete >
+                           <input type="text" ng-model="eventid1.value" class="form-control" mass-autocomplete-item="autocomplete_options" >
+                           </p>
+                      </div>
+                  </div>
+
+
+                   <div class ="col-lg-12">
+                      <div class="col-lg-6">
+                          <label class="col-lg-4 control-label text-left" ><font style="font-size: 140%">From:</font></label>
+                        <p class="col-lg-8 input-group " >
+                         <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt2" is-open="opened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions2" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event,'opened2')" ><i class="glyphicon glyphicon-calendar"></i></button> 
+                          </span>
+                        </p>
+                      </div>
+                   </div>
+                    <div class="col-lg-12">
+                      <div class="col-lg-6">
+                         <label class="col-lg-4 control-label text-left" ><font style="font-size: 140%">To:  </font></label>
+                         <p class="col-lg-8 input-group " >
+                         <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt3" is-open="opened3" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions3"  date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event,'opened3')" ><i class="glyphicon glyphicon-calendar"></i></button>
+                    
+                          </span>
+                        </p>
+                      </div>
+                      <div class="col-lg-2">
+                           <button type="button" class="btn btn-default" ng-click="search()"><i class="fa fa-hand-o-right"></i> View</button> 
+                      </div>
+                    </div>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row" ng-show="showpanel">
+           <div class="col-lg-12">
+              <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  <font class="fontbold">{{currentenv}}</font> Detailed Status Chart for MIDs - <font class="fontbold">{{currenteventid}} ({{portfolio}})</font> 
+                        </h3>
+
+                    </div>
+                    <div  class="panel-body" >
+                        
+                    <chart value='CpmDetailchart' height="400" chartobj='chartObj'></chart>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+
+    <div class="ui icon" ng-show="showpanel">
+      <label>Legend:&nbsp;&nbsp;</label>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(238,99,99,.7);" data-content="On CPM" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(92,172,238,.6);" data-content="NOT On CPM" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(255, 0, 0, 0.7);" data-content="Long Running Job duration exccees 60 mins compared with Avg 30 days" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(255, 128, 0, 0.7);" data-content="Long Running Job duration exccees 30 mins compared with Avg 30 days" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(255, 255, 0, 1);" data-content="Long Running Job duration exccees 15 mins compared with Avg 30 days" data-variation="small"></i>
+    </div>
+
+
+  </div>
+</div>

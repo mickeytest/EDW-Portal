@@ -1,0 +1,127 @@
+  <style type="text/css">
+    .fileloading>ul {
+      
+      list-style: none;
+    }
+    .fileloading>ul>li {
+      display: inline-block;
+      border: 1px solid #999;
+       padding: 0 0 0 0;
+       margin-left: 5px;
+    }
+
+    .fileloading > ul > li > a {
+      text-decoration: none;
+      display: block;
+      color: #999;
+      padding: 3px 3px 3px 3px;
+    }
+
+    .fileloading > ul > li > a:hover {
+      color: white;
+      background-color: #999;
+    }
+
+    .fileloading > ul > li >.selected {
+      color: white;
+      background-color: #44AAD5;
+    }
+
+  </style>
+
+<div id="page-wrapper" >
+  <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">File Loading </h1>   
+         </div>
+       </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> File Loading Chart - Number Based</h3>
+                    </div>
+                    <div  class="panel-body">
+                        <chart value='FloadChart1' height="400" chartobj='chartObj'>
+                        </chart>
+             
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+<!--         <div class="row" ng-cloak="">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> File Loading Chart - Data Subject Based</h3>
+                    </div>
+                    <div  class="panel-body">
+                        <chart value='FloadChart2' height="400" chartobj='chartObj'>
+                        </chart>
+             
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row">&nbsp;</div>
+          <div class="row" ng-cloak="">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> File Loading Chart - Requestor Based</h3>
+                    </div>
+                    <div  class="panel-body">
+                        <chart value='FloadChart3' height="400" chartobj='chartObj'>
+                        </chart>
+             
+                    </div>
+                </div>
+            </div>
+          </div> -->
+          <div class="row ">&nbsp;</div>
+       <!--    <div class="col-lg-2" >
+                <label class="radio-inline bigfont">
+                  <input type="radio" value= "hpe"  ng-model="company" >
+                  HPE           
+                </label>
+                <label class="radio-inline bigfont">
+                  <input type="radio" value= "hpi"  ng-model="company" >
+                   HPI
+                </label>
+               </div> -->
+
+<!-- 
+          <div class="row">
+              <div class="col-lg-2 btn-group">
+                <label class="btn btn-default" ng-model="company" uib-btn-radio="'HPE'" >HPE</label>
+                <label class="btn btn-default" ng-model="company" uib-btn-radio="'HPI'" >HPI</label>     
+              </div>
+    
+
+             <div class="col-lg-10 row fileloading">
+               <label class="col-lg-3 control-label pull-left bigfont">Source System Filter: </label>
+            
+                <ul  >
+                  <li ng-repeat="alphebet in alphebets" ng-click="onchange(alphebet.loc)" > <a herf="" ng-class="alphebet.selected ==1? 'selected':''">{{alphebet.name}}</a></li>              
+                </ul>
+
+            </div>
+           </div>
+          <div class="row" >
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> File Loading Chart - Key Source</h3>
+                    </div>
+                    <div  class="panel-body">
+                        <chart value='FloadChart4' chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+          </div> -->
+	</div>	
+</div>

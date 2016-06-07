@@ -1,0 +1,60 @@
+{
+    "midbystatus": {
+        "data": [
+            {
+                "name": "ZEO",
+                "y": 1,
+                "drilldown": "ZEO"
+            }
+        ],
+        "drilldown": [
+            {
+                "id": "ZEO",
+                "data": [
+                    [
+                        "Data issue",
+                        1
+                    ]
+                ]
+            }
+        ]
+    },
+    "midbychangetype": {
+        "data": [
+            {
+                "name": "ZEO",
+                "y": 1,
+                "drilldown": "ZEO"
+            }
+        ],
+        "drilldown": [
+            {
+                "id": "ZEO",
+                "data": [
+                    [
+                        "Data issue",
+                        1
+                    ]
+                ]
+            }
+        ]
+    },
+
+   	"middetail":[
+   		{
+   			"MID":"23813",
+   			"Status":"In Progress",
+   			"ChangeType":"Optimization",
+   			"Description":"Optimization Dev Work for MID 23813",
+   			"Solution":"new created table will replace subquery in the script"
+   		},
+   		{
+   			"MID":"15376",
+   			"Status":"In Progress",
+   			"ChangeType":"Optimization",
+   			"Description":"MID 15376 First4Hours 1.7B Update",
+   			"Solution":""
+   		}
+   	] 
+
+}

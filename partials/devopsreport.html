@@ -1,0 +1,156 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">EDW Dev Ops Report </h1> 
+           
+          </div>
+       </div>
+       <div class="row">&nbsp;</div>
+
+       <div class="row">
+          <div class="col-lg-3">
+             <label class="control-label pull-left" ><font style="font-size: 90%">{{title}} </font></label>
+             
+          </div>
+           <div class="col-lg-9">
+           <button type="button" class="btn btn-default" ng-click="clickMonthFilter()"><i class="fa fa-search-plus"></i>  Month Filter</button>
+            <button type="button" class="btn btn-default" ng-click="clickDateFilter()"><i class="fa fa-search-plus"></i>  Date Filter</button>
+            <button type="button" class="btn btn-default" ng-click="openLastest()" ><i class="fa fa-undo" ></i>  Revert Filter</button>
+          </div>
+       </div>
+
+      <div class="row">&nbsp;</div>
+
+      <div class="row" uib-collapse="isMonthCollapsed">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+             <div class="col-lg-6">
+              <label class="col-lg-3 control-label text-right" ><font style="font-size: 140%">MEC Month:</font></label>
+                <p class="col-lg-9 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM" ng-model="dt1" is-open="opened1" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions1" datepicker-mode="'month'" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened1')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+              </div>
+            </div>
+           </div>
+          </div>
+      </div>
+
+      <div class="row" uib-collapse="isDateCollapsed">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">  
+              <div class="col-lg-5">
+                  <label class="col-lg-2 control-label text-right" ><font style="font-size: 140%">From:</font></label>
+                <p class="col-lg-10 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt2" is-open="opened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions2" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened2')" ><i class="glyphicon glyphicon-calendar"></i></button> 
+                  </span>
+                </p>
+              </div>
+              <div class="col-lg-5">
+                 <label class="col-lg-2 control-label text-right" ><font style="font-size: 140%">To:  </font></label>
+                 <p class="col-lg-10 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt3" is-open="opened3" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions3"  date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened3')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+              </div>
+              <div class="col-lg-2">
+                   <button type="button" class="btn btn-default" ng-click="viewDate()"><i class="fa fa-hand-o-right"></i> View</button> 
+              </div>
+            </div>
+           </div>
+          </div>
+      </div>
+
+	  <div class="row">&nbsp;</div>
+
+	  <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  MIDs by Status </h3>
+                    </div>
+                    <div  class="panel-body">                 
+                        <chart value='devopsbystatus' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  MIDs by Change Type  </h3>
+                    </div>
+                    <div  class="panel-body">                 
+                        <chart value='devopsbychangetype' height="400" chartobj='chartObj'>
+                        </chart>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+      <div class="row" class="table-responsive">
+         <div class="col-lg-9 ">
+           <label>Items per page:</label>
+           <label class="checkbox-inline">
+              <input type="number" min="1" class="form-control" ng-model="pageSize">
+          </label>
+        
+         </div>  
+         <div class="col-lg-3 pull-right">
+           <label>Search:</label>
+            <label class="checkbox-inline">
+              <input id="query" class="form-control"  ng-model="query" ng-change="change()">
+           </label>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div> 
+      <div class="row">
+	      <div class="col-lg-12">
+	          <table class="table table-bordered table-hover"  >
+	               <thead>
+	                  <tr>
+	                   <th class="col-lg-1" ng-click="sort('MID')">MID
+	                    <span class="glyphicon sort-icon" ng-show="sortKey=='MID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                  </th>   
+	                    <th class="col-lg-1" ng-click="sort('Status')">Status
+	                      <span class="glyphicon sort-icon" ng-show="sortKey=='Status'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                    </th>                                   
+	                   <th class="col-lg-1" ng-click="sort('ChangeType')">Change Type
+	                      <span class="glyphicon sort-icon" ng-show="sortKey=='ChangeType'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                    </th>
+	                   <th class="col-lg-1" ng-click="sort('Description')">Description
+	                      <span class="glyphicon sort-icon" ng-show="sortKey=='Description'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                    </th>
+
+	                     <th class="col-lg-1" ng-click="sort('Solution')">Solution
+	                      <span class="glyphicon sort-icon" ng-show="sortKey=='Solution'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+	                    </th>           
+	                  </tr>
+	              </thead>
+	               <tbody>
+	                      <tr dir-paginate="job in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize" >
+	                          <td>{{job.MID}}</td>
+	                          <td>{{job.Status}}</td>
+	                          <td>{{job.ChangeType}}</td>
+	                          <td>{{job.Description}}</td>
+	                          <td>{{job.Solution}}</td>                     
+	                        </tr>
+	              </tbody>    
+	            </table> 
+	            <uib-pagination ng-show="total" direction-links="true" boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+	      </div> 
+	   </div>   
+    </div>
+</div>

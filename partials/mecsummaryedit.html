@@ -1,0 +1,179 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header ">Edit Rollup Status During MEC   <i class="save icon" ng-click="saveJAD()"></i></h1> 
+           
+          </div>
+      </div>
+
+
+
+     <div class="row">&nbsp;</div>
+     <div class="row">&nbsp;</div>
+      <div class="row" >
+        <div class="col-lg-12">
+        <div class="content" style="margin:.5em">
+                <p class="col-lg-6 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM" ng-model="dt1" is-open="opened1" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions1" datepicker-mode="'month'" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" placeholder="MEC Month"/>
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened1')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+        </div>
+          </div>
+      </div>
+
+  	<div class="row" >
+  	<div class="col-lg-12">
+  		<table class="ui celled structured table" style="margin:.5em">
+		  <thead>
+		    <tr>
+		        <th rowspan="2">Instance</th>
+		        <th  ng-repeat="week in data.weeks" rowspan="2">{{week.t}}</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>APJ (JAD)</td>
+		      <td ng-repeat= "apj in data.JAD " ng-click="clickitem($index,'JAD')"> 
+		      <div ng-class="(selectIndex==$index && selectenv=='JAD')?'ui ribbon label':''">
+			      <i ng-class="apj.t==''? '': (apj.d==''? 'right floated green wait icon':'right floated red wait icon')"></i>{{apj.d}}
+			      <i ng-class="apj.t==''? '': (apj.o==true? 'right floated green check circle icon' : 'right floated red remove  circle icon')" ></i>{{apj.t}}
+				</div>
+		      </td>
+		     
+		    </tr>
+		   	<tr>
+		      <td>EMEA (ZEO)</td>
+
+		       <td ng-repeat= "apj in data.ZEO " ng-click="clickitem($index,'ZEO')"> 
+		          	<div ng-class="(selectIndex==$index && selectenv=='ZEO')?'ui ribbon label':''">
+				      <i ng-class="apj.t==''? '': (apj.d==''? 'right floated green wait icon':'right floated red wait icon')"></i>{{apj.d}}
+				      <i ng-class="apj.t==''? '': (apj.o==true? 'right floated green check circle icon' : 'right floated red remove  circle icon')"></i>{{apj.t}}
+		    		</div>
+
+		    	</td>
+		    </tr>
+		    <tr>
+		      <td>AMS (EMR)</td>
+		 		 <td ng-repeat= "apj in data.EMR " ng-click="clickitem($index,'EMR')"> 
+		 		 <div ng-class="(selectIndex==$index && selectenv=='EMR')?'ui ribbon label':''">
+				      <i ng-class="apj.t==''? '': (apj.d==''? 'right floated green wait icon':'right floated red wait icon')"></i>{{apj.d}}
+				      <i ng-class="apj.t==''? '': (apj.o==true? 'right floated green check circle icon' : 'right floated red remove  circle icon')"></i>{{apj.t}}
+				</div>
+				</td>
+		    
+		    </tr>
+		
+		  </tbody>
+		</table>
+	</div>
+	 </div>
+
+      <div class="row">&nbsp;</div>
+     <div id="messagebar"> 
+     </div>
+         
+    <div class="row">
+    	<div class="col-lg-12">
+	       <div class="ui one column cards"  >
+	       	   <div class="ui card">
+		       	   <div class="content">
+			       	   	<div class="ui one column cards">	 
+					      	<div class="ui card"> 
+								  <div class="content">
+								    <div class="header">JAD   <i class="add circle icon" ng-click="addJAD()"></i></div>
+								    <div class="description">
+								       <ab ng-repeat="jadsummary in jadsummarys">
+									        <div class="ui fluid action input ">
+										  <input type="text" ng-model="jadsummary.name">
+										  <button class="ui  basic icon button" ng-click="removeJAD(jadsummary)">
+										    <i class="remove icon"></i>
+										  </button>
+										 
+										</div>
+									   </ab>
+									</div>
+								  </div>
+							</div>
+						    <div class="ui card">
+							  <div class="content">
+								    <div class="header">ZEO   <i class="add circle icon" ng-click="addZEO()"></i></div>
+								    <div class="description">
+								       <ab ng-repeat="zeosummary in zeosummarys">
+									        <div class="ui fluid action input ">
+										  <input type="text" ng-model="zeosummary.name">
+										  <button class="ui  basic icon button" ng-click="removeZEO(zeosummary)">
+										    <i class="remove icon"></i>
+										  </button>
+										 
+										</div>
+									   </ab>
+									</div>
+								  </div>
+							</div>
+							<div class="ui card">
+								  <div class="content">
+								    <div class="header">EMR   <i class="add circle icon" ng-click="addEMR()"></i></div>
+								    <div class="description">
+								       <ab ng-repeat="emrsummary in emrsummarys">
+									        <div class="ui fluid action input ">
+										  <input type="text" ng-model="emrsummary.name">
+										  <button class="ui  basic icon button" ng-click="removeEMR(emrsummary)">
+										    <i class="remove icon"></i>
+										  </button>
+										 
+										</div>
+									   </ab>
+									</div>
+								  </div>
+							</div>
+							<div class="ui card">
+								 	<div class="content">
+								    <div class="header">Yotta   <i class="add circle icon" ng-click="addYOTTA()"></i></div>
+								    <div class="description">
+								       <ab ng-repeat="yottasummary in yottasummarys">
+									        <div class="ui fluid action input ">
+										  <input type="text" ng-model="yottasummary.name">
+										  <button class="ui  basic icon button" ng-click="removeYOTTA(yottasummary)">
+										    <i class="remove icon"></i>
+										  </button>
+										 
+										</div>
+									   </ab>
+									</div>
+								  </div>
+							</div>
+						    <div class="ui card">
+								<div class="content">
+								    <div class="header">Major Incidents/Other Status   <i class="add circle icon" ng-click="addOTHER()"></i></div>
+								    <div class="description">
+								       <ab ng-repeat="othersummary in othersummarys">
+									        <div class="ui fluid action input ">
+										  <input type="text" ng-model="othersummary.name">
+										  <button class="ui  basic icon button" ng-click="removeOTHER(othersummary)">
+										    <i class="remove icon"></i>
+										  </button>
+										 
+										</div>
+									   </ab>
+									</div>
+								  </div>
+							</div>
+						</div>
+				   </div>
+
+				    <div class="ui bottom attached button" ng-click="save()">
+				      <i class="save icon" ></i>
+				      Save
+				    </div>
+				</div>
+
+	      </div>
+	    </div>
+     </div>
+
+  </div>
+</div>

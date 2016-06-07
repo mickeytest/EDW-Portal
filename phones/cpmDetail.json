@@ -1,0 +1,218 @@
+{
+    "series": {
+        "data": [
+            {
+                "MIDs": "11021",
+                "x": "2015/11/3",
+                "RowAffected": 89652,
+                "Durations": 0.12,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/4",
+                "RowAffected": 69.2,
+                "Durations": 0.43,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/5",
+                "RowAffected": 59.7,
+                "Durations": 0.97,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/6",
+                "RowAffected": 71.5,
+                "Durations": 0.77,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/7",
+                "RowAffected": 89.4,
+                "Durations": 1.45,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/8",
+                "RowAffected": 79.2,
+                "Durations": 1.28,
+                "cpm": "Yes"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/9",
+                "RowAffected": 54.7,
+                "Durations": 1.33,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/10",
+                "RowAffected": 45.5,
+                "Durations": 0.38,
+                "cpm": "Yes"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/11",
+                "RowAffected": 94.4,
+                "Durations": 6.93,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/12",
+                "RowAffected": 33.2,
+                "Durations": 0.65,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/13",
+                "RowAffected": 63.7,
+                "Durations": 1.88,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/14",
+                "RowAffected": 71.5,
+                "Durations": 0.65,
+                "cpm": "Yes"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/15",
+                "RowAffected": 86.4,
+                "Durations": 1.38,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/16",
+                "RowAffected": 91.2,
+                "Durations": 0.93,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/17",
+                "RowAffected": 49.7,
+                "Durations": 1.45,
+                "cpm": "Yes"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/18",
+                "RowAffected": 71.5,
+                "Durations": 0.43,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/19",
+                "RowAffected": 66.4,
+                "Durations": 0.77,
+                "cpm": "Yes"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/20",
+                "RowAffected": 79.2,
+                "Durations": 0.65,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/21",
+                "RowAffected": 59.7,
+                "Durations": 0.93,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/22",
+                "RowAffected": 71.5,
+                "Durations": 0.77,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/23",
+                "RowAffected": 96.4,
+                "Durations": 0.43,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/24",
+                "RowAffected": 99.2,
+                "Durations": 1.45,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/25",
+                "RowAffected": 79.7,
+                "Durations": 0.77,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/26",
+                "RowAffected": 71.5,
+                "Durations": 1.38,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/27",
+                "RowAffected": 56.4,
+                "Durations": 0.43,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/28",
+                "RowAffected": 49.2,
+                "Durations": 0.77,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/29",
+                "RowAffected": 39.7,
+                "Durations": 0.93,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/11/30",
+                "RowAffected": 61.5,
+                "Durations": 1.45,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/12/1",
+                "RowAffected": 86.4,
+                "Durations": 0.43,
+                "cpm": "No"
+            },
+            {
+                "MIDs": "11021",
+                "x": "2015/12/2",
+                "RowAffected": 59.2,
+                "Durations": 0.77,
+                "cpm": "No"
+            }
+        ]
+    },
+    "from":"2015-11-01",
+    "to":"2015-12-01"
+}

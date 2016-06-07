@@ -1,0 +1,202 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+    <div class="row">
+          <div class="col-lg-12">
+            <h1 class="page-header animated bounceInRight">Ticket <small>Data from Latest 3 months</small></h1>   
+           
+          </div>
+    </div>
+    <div class="row">&nbsp;</div>
+    
+    <div class="row">
+        <div class="col-lg-4" >
+          <div class="panel panel-info">  
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>  MEC: {{ticketDuationMec}}</h3>
+                </div>             
+             <div class="panel-body">
+                   <chart value='mychart5' chartobj='chartObj'>
+                   </chart>
+              </div>
+          </div>
+    </div>
+    <div  class="col-lg-4" >
+          <div class="panel panel-info"> 
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>  Non-MEC: {{ticketDuationNonMec}}</h3>
+                </div>             
+              <div class="panel-body">
+                   <chart value='mychart6' chartobj='chartObj'>
+                   </chart>
+              </div>
+          </div>
+    </div>
+    <div  class="col-lg-4" >
+          <div class="panel panel-success"> 
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>  Need SME Help: {{tickeHelpTotal}}</h3>
+                </div>             
+              <div class="panel-body">
+                   <chart value='mychart8' chartobj='chartObj'>
+                   </chart>
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-info">  
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>  Ticket Total: {{tickeTotal}} Avg: {{tickeAvg}}/week</h3>
+                </div>             
+             <div class="panel-body">
+                   <chart value='mychart7' chartobj='chartObj'>
+                   </chart>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="row"> 
+    <div class="row">&nbsp;</div> 
+      
+    <div class="row">
+          <div class="col-lg-12">
+           <h1 class="page-header animated bounceInRight">Dev On-Call Summary <!-- <small>Statistics Overview</small> --></h1>   
+           
+            <form name="myForm" class="form-horizontal pull-left animated bounceInRight" >
+             <label class="col-lg-4 control-label pull-left">Environment</label>
+              <div class="col-lg-8 pull-right" >
+                <label class="radio-inline">
+                  <input id= "zeo" type="radio" value= "ZEO" ng-model="env" >
+                   ZEO
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value= "EMR" ng-model="env" >
+                   EMR
+                </label >
+                <label class="radio-inline">
+                  <input type="radio" value= "JAD" ng-model="env" >
+                   JAD
+                </label>
+               </div>
+            
+             </form>
+          </div>
+      </div>
+    <div class="row">&nbsp;</div> 
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="btn-group">
+          <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Day'" >Day</label>
+          <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Week'" >Week</label>
+          <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Month'" >Month</label>
+          <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'Year'" >Year</label>
+       </div>
+    </div>
+    </div>
+     
+      
+    <div class="row" >
+        <div class="col-lg-12">
+        <!--Body content-->
+             <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Recovery Chart by {{radioModel}}</h3>
+                      </div>    
+                    <div  class="panel-body" >
+                      <chart  value='mycharts' height="400" chartobj='chartObj'>
+                      </chart>
+                    </div>             
+            </div>
+        </div>
+    </div>
+      
+    
+
+    <div class="row">&nbsp;</div> 
+      
+    <div class="row" ng-show="radioModel=='Day'">
+       <div class="col-lg-9 ">
+         <label>Items per page:</label>
+         <label class="checkbox-inline">
+            <input type="number" min="1" class="form-control" ng-model="pageSize">
+        </label>
+      
+       </div>  
+       <div class="col-lg-3 pull-right" ng-show="radioModel=='Day'">
+         <label>Search:</label>
+          <label class="checkbox-inline">
+            <input id="query" class="form-control" ng-model="query" ng-change="change()">
+         </label>
+        </div>
+     </div>
+
+      <div class="row">&nbsp;</div> 
+
+      <div class="row" ng-show="radioModel=='Day'">
+        <div class="col-lg-12">
+        <table class="table table-bordered table-hover" >
+           
+          <!-- <table class="table table-bordered table-hover"  data-pagination="true"> -->
+             <thead>
+                <tr>
+                 <th ng-click="sort('name')">MID
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('x')">Date
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='x'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                  <th ng-click="sort('start_time')">Start Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='start_time'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('end_time')">End Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='end_time'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('AO1')">AO Response Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='AO1'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('OC1')">OnCall Response Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='OC1'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('OC2')">OnCall Fix Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='OC2'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('AO2')">AO Re-Exec Time
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='AO2'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('error_detail')">Error Detail
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='error_detail'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                   <th ng-click="sort('action')">Action
+                    <span class="glyphicon sort-icon" ng-show="sortKey=='action'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                  </th>
+                </tr>
+            </thead>
+             <tbody>
+                    <tr dir-paginate="mid in events | orderBy:sortKey:reverse| filter:query |itemsPerPage:pageSize" ng-class="mid.AO1ExceedAvg || mid.OC1ExceedAvg || mid.OC2ExceedAvg||mid.AO2ExceedAvg ||mid.AO1ExceedAvg? 'danger':''">
+                        <td>{{mid.name}}</td>
+                        <td>{{mid.x}}</td>
+                        <td>{{mid.start_time}}</td>
+                        <td>{{mid.end_time}}</td>
+                        <td><font ng-class="mid.AO1ExceedAvg?'highlightred':''">{{mid.AO1}}</font></td>
+                        <td><font ng-class="mid.OC1ExceedAvg?'highlightred':''">{{mid.OC1}}</font></td>
+                        <td><font ng-class="mid.OC2ExceedAvg?'highlightred':''">{{mid.OC2}}</font></td>
+                        <td><font ng-class="mid.AO2ExceedAvg?'highlightred':''">{{mid.AO2}}</font></td>
+                        <td>{{mid.error_detail}}</td>
+                        <td>{{mid.action}}</td>
+                      </tr>
+            </tbody>    
+          </table>   
+
+      <uib-pagination ng-show="total" direction-links="true"  boundarylinks="true" items-per-page="pageSize" total-items="total" ng-change="pageChanged()" ng-model="currentPage"></uib-pagination>
+        
+  
+          
+        </div>
+      </div>  
+
+    </div>
+  </div>
+</div>

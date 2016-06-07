@@ -1,0 +1,27 @@
+{
+    "JADTIME": "2016-05-11 11:26",
+    "EMRTIME": "",
+    "ZEOTIME": "",
+    "JADMEET":true,
+    "EMRMEET":true,
+    "ZEOMEET":false,
+    "ZEOCOMMENT": [
+        {"c":"this is a test"},
+        {"c":"This is another test"}
+    ],
+    "JADCOMMENT": [
+       {"c":"N/A"}
+    ],
+    "EMRCOMMENT": [
+       {"c":"this is a test"},
+        {"c":"This is another test"}
+    ],
+    "YOTTACOMMENT": [
+        {"c":"this is a test"},
+        {"c":"This is another test"}
+    ],
+    "OTHERCOMMENT": [
+        {"c":"this is a test"},
+        {"c":"This is another test"}
+    ]
+}

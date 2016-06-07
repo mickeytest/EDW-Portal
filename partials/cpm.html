@@ -1,0 +1,261 @@
+<script type="text/javascript">
+$('.button')
+  .popup({
+    inline: true
+  })
+;
+</script>
+<div id="page-wrapper">
+  <div class="container-fluid" >
+
+
+                <!-- Page Heading -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">
+                  Rollup Status Summary 
+          </div>
+      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">
+                      <i class="fa fa-bar-chart-o fa-fw"></i> Daily Rollup Status Summary  &nbsp;
+                      <i class="pause icon fa fa-square button" data-content="Stop Auto Refresh Every 1 Min " data-variation="small" ng-show="summaryAuto"ng-click="summaryAuto = !summaryAuto"></i>
+                      <i class="play icon fa fa-square button" data-content="Start Auto Refresh Every 1 Min" data-variation="small" ng-show="!summaryAuto" ng-click="summaryAuto = !summaryAuto"></i>
+                      </h3>
+                  </div>
+                  <div  class="panel-body">
+                       <chart value='mycharts' type="area" height="400" chartobj='chartObj'>
+                       </chart>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="ui icon">
+        <label>Legend:&nbsp;&nbsp;</label>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #FF0033;" data-content="Rollup Not Meet SLA: Exceed 10 hours" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #FC9C12;" data-content="Rollup Approach SLA: Exceed 9.5 hours" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #FFFF00;" data-content="Rollup Meet SLA, but not started on Time" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #81D5A9;" data-content="Rollup Meet SLA and Started on Time" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #ABABAB;" data-content="Rollup not Started or data not ready" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #C65355;" data-content="Off Cycle not finished before Rollup starts" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #FFFF7A;" data-content="Off Cycle not started on Time" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #81D5D4;" data-content="Off Cycle started and finished on Time" data-variation="small"></i>
+        <i class="circular icon fa fa-square button" style="font-size: 100%; color: #C9C9C9;" data-content="Off Cycle not started or data not ready" data-variation="small"></i>
+      </div>
+      <hr>
+      <div class="row">
+            <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">Critical Path Summary</h1>   
+            </div>
+      </div>
+      <div class="row">&nbsp;</div>
+
+    <div class="row">
+          <div class="col-md-6">
+          <label>View By:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div class="ui buttons">
+     
+              <button class="ui  button" ng-click="onclickviewby('job')">Job</button>
+              <div class="or"></div>
+              <button class="ui teal button" ng-click="onclickviewby('time')">Time</button>
+              <div class="or"></div>
+              <button class="ui blue button" ng-click="onclickviewby('portfolio')">Portfolio</button>
+            </div>
+        </div>
+     </div>  
+      <div class="row">&nbsp;</div>
+     <div class="row">
+
+      <div class="col-lg-12">
+    
+        <div class="ui grid">
+            <div class="left floated five wide column">
+              <div class="inline fields">
+              
+                      <div class="field">
+                     
+                         <div class="ui fluid icon input">
+
+                            <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                          </div>
+                  </div>
+              </div>
+            </div>
+
+           <div class="right floated ten wide column">
+                 <div class="inline fields">
+                    <div class="field">
+                      <div  class="ui form">
+                          <div class="inline fields">
+                            <label>Environment:</label>
+                            <div class="field">
+                              <div class="ui slider checkbox">
+                                <input  type="radio" name="env" value= "BER" ng-model="env">
+                                <label>ITG</label>
+                              </div>
+                            </div>
+                             <div class="field">
+                              <div class="ui slider checkbox">
+                                <input  type="radio" name="env" value= "ZEO" ng-model="env">
+                                <label>ZEO</label>
+                              </div>
+                            </div>
+                             <div class="field">
+                              <div class="ui slider checkbox">
+                                <input type="radio" name="env" value= "EMR" ng-model="env">
+                                <label>EMR</label>
+                              </div>
+                            </div>
+                             <div class="field">
+                              <div class="ui slider checkbox">
+                                <input type="radio" name="env"  value= "JAD" ng-model="env">
+                                <label>JAD</label>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+
+                      </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
+    <div class="row">&nbsp;</div>
+
+    <div class="row" >
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Rollup CPM Chart  &nbsp;
+                      <i class="pause icon fa fa-square button" data-content="Stop Auto Refresh Every 1 Min" data-variation="small" ng-show="cpmAuto"ng-click="cpmAuto = !cpmAuto"></i>
+                      <i class="play icon fa fa-square button" data-content="Start Auto Refresh Every 1 Min" data-variation="small" ng-show="!cpmAuto" ng-click="cpmAuto = !cpmAuto"></i>
+                      </h3>
+                </div>
+                <div class="panel-body " >
+                    <chart  value='cpm' height="{{height}}" chartobj='chartObj'>
+                    </chart>
+         
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui icon" ng-show="viewby=='job'">
+      <label>Legend:&nbsp;&nbsp;</label>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #E6005C;" data-content="On CPM, Percentage > 90" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #E6E600;" data-content="On CPM, Percentage > 60" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #90ed7d;" data-content="On CPM, Percentage &lt;= 60" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #c2d6d6;" data-content="Estimated Jobs on CPM" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(255, 0, 0, 0.7);" data-content="Long Running Job Parallel with jobs on CPM (Percentage > 60), and duration exccees 60 mins compared with Avg 30 days" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(255, 128, 0, 1);" data-content="Long Running Job Parallel with jobs on CPM (Percentage > 60), and duration exccees 30 mins compared with Avg 30 days" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(255, 255, 0, 0.7);" data-content="Long Running Job Parallel with jobs on CPM (Percentage > 60), and duration exccees 15 mins compared with Avg 30 days" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: rgba(185,184,187, .7);" data-content="Long Running Job Parallel with jobs on CPM (Percentage &lt;= 60)" data-variation="small"></i>
+    </div>
+
+   <div class="ui icon" ng-show="viewby=='time'">
+      <label>Legend:&nbsp;&nbsp;</label>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #E6005C;" data-content="Overall Rollup Status - behind schedule" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #90ed7d;" data-content="Overall Rollup Status - before schedule" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #c2d6d6;" data-content="Estimated Jobs on CPM" data-variation="small"></i>
+   </div>
+
+    <div class="ui icon" ng-show="viewby=='portfolio'">
+      <label>Legend:&nbsp;&nbsp;</label>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #E6005C;" data-content="On CPM, Percentage > 90" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #E6E600;" data-content="On CPM, Percentage > 60" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #90ed7d;" data-content="On CPM, Percentage &lt;= 60" data-variation="small"></i>
+      <i class="circular icon fa fa-square button" style="font-size: 100%; color: #c2d6d6;" data-content="Estimated Jobs on CPM" data-variation="small"></i>
+    </div>
+
+  <hr>
+    <div ng-show='datafound'>
+      <div class="row" class="table-responsive">
+          <div class="col-lg-9 btn-group"  >
+                <label class="btn btn-default button" data-content="Jobs less than 2 mins will not show in the list." ng-model="viewMode" uib-btn-radio="'simple'" >Simplified</label>
+                <label class="btn btn-default button" data-content="All the jobs will show in the list." ng-model="viewMode" uib-btn-radio="'all'" >All</label>     
+         </div> 
+
+         <div class="col-lg-3 pull-right">
+           <label>Search:</label>
+            <label class="checkbox-inline">
+              <input id="query" class="form-control" ng-model="query" ng-change="change()">
+           </label>
+          </div>
+      </div>
+
+      <div class="row">&nbsp;</div> 
+
+      <div class="row" >
+          <div class="col-lg-12">
+            <table class="table table-bordered table-hover"  >
+               <thead>
+                  <tr>
+                   <th ng-click="sort('EVENTID')">Event ID
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='EVENTID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('LEVEL')">Level
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='LEVEL'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                    <th ng-click="sort('BATCHID')">Batch ID
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='BATCHID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('MIN')">Mininum
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MIN'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('MIN')">Maximum
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='MIN'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('DURATION')">Duration
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='DURATION'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('PERCENTAGE')">Percentage
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='PERCENTAGE'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                      <th ng-click="sort('PERCENTAGE')">Overall %
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='PERCENTAGE'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('FAILED')">Failed
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='FAILED'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('START_TS')">UTC Start Time
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='START_TS'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('END_TS')">UTC End Time
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='END_TS'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                     <th ng-click="sort('PARALLELCOUNT')">Parallel Count
+                      <span class="glyphicon sort-icon" ng-show="sortKey=='PARALLELCOUNT'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                    </th>
+                  </tr>
+              </thead>
+               <tbody>
+                      <tr ng-repeat="event in events | orderBy:sortKey:reverse| filter:query" ng-class="event.PERCENTAGE>90? 'danger' : (event.PERCENTAGE>60? 'warning':'') " ng-if="(viewMode=='simple' && event.DURATION > 2) || viewMode=='all' ">
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.EVENTID}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.LEVEL}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''"><a ng-href="http://g4w1128.houston.hp.com/dialadmin/{{env=='ITG'? 'ITG1':(env=='EMR'? 'PRO1' : (env=='ZEO'? 'PRO2':'PRO3'))}}/dialMonitor.aspx?mode=Tasks&batch_id={{event.BATCHID}}">{{event.BATCHID}}</a></font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.MIN}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.MAX}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.DURATION}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.PERCENTAGE}}%</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.OVERALLPERCENTAGE}}%</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.FAILED ==  1? 'YES' : 'NO' }}</font></td>           
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.START_TS}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.END_TS}}</font></td>
+                          <td><font ng-class="event.FAILED ==1? 'highlightred':''">{{event.PARALLELCOUNT}}</font></td>
+                      
+                      </tr>
+              </tbody>    
+            </table>   
+          </div>
+      </div>  
+    </div>  
+  </div>
+</div>

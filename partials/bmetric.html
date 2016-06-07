@@ -1,0 +1,273 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header animated bounceInRight">
+                  Baseline Metrics
+              </h1>
+          </div>
+      </div>
+      
+      <div class="row">&nbsp;</div> 
+
+
+      <div class="row">
+          <div class="col-lg-3">
+             <label class="control-label pull-left" ><font style="font-size: 90%">{{title}} </font></label>
+             
+          </div>
+           <div class="col-lg-9">
+           <button type="button" class="btn btn-default" ng-click="clickMonthFilter()"><i class="fa fa-search-plus"></i>  Month Filter</button>
+            <button type="button" class="btn btn-default" ng-click="clickDateFilter()"><i class="fa fa-search-plus"></i>  Date Filter</button>
+            <button type="button" class="btn btn-default" ng-click="openLastest()" ><i class="fa fa-undo" ></i>  Revert Filter</button>
+          </div>
+      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row" uib-collapse="isMonthCollapsed">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+             <div class="col-lg-6">
+              <label class="col-lg-3 control-label text-right" ><font style="font-size: 140%">MEC Month:</font></label>
+                <p class="col-lg-9 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM" ng-model="dt1" is-open="opened1" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions1" datepicker-mode="'month'" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened1')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+              </div>
+            </div>
+           </div>
+          </div>
+      </div>
+
+      <div class="row" uib-collapse="isDateCollapsed">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">  
+              <div class="col-lg-5">
+                  <label class="col-lg-2 control-label text-right" ><font style="font-size: 140%">From:</font></label>
+                <p class="col-lg-10 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt2" is-open="opened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions2" date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened2')" ><i class="glyphicon glyphicon-calendar"></i></button> 
+                  </span>
+                </p>
+              </div>
+              <div class="col-lg-5">
+                 <label class="col-lg-2 control-label text-right" ><font style="font-size: 140%">To:  </font></label>
+                 <p class="col-lg-10 input-group " >
+                 <input type="text" class="form-control" datepicker-popup="yyyy-MM-dd" ng-model="dt3" is-open="opened3" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions3"  date-disabled="disabled(date, mode)" ng-required="true" current-text ="today" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event,'opened3')" ><i class="glyphicon glyphicon-calendar"></i></button>
+            
+                  </span>
+                </p>
+              </div>
+              <div class="col-lg-2">
+                   <button type="button" class="btn btn-default" ng-click="viewDate()"><i class="fa fa-hand-o-right"></i> View</button> 
+              </div>
+            </div>
+           </div>
+          </div>
+      </div>
+<div class="row">&nbsp;</div>
+    <div class="row"> 
+      <div class="ui three column cards">
+
+        <div class="ui  card ">
+          <div class="ui top attached blue message">
+             <div class=" ui blue header "><a href="#/yottaplatformtrend"><i class="fa fa-map "></i>  Yotta Operation </a></div>
+          </div>
+          <div class="content">
+            <div class="description">
+              <dl>
+                <dd><i class="fa fa-circle text-info" ></i> <font ng-class="'highlightblue'">{{bmetric.Yotta.Ticket}}</font> Tickets in HPSM
+                </dd>                 
+                <dd><i class="fa fa-circle text-info" ></i> <font ng-class="'highlightblue'">{{bmetric.Yotta.CloseTicket}}</font> Tickets Closed
+                </dd>
+                <dd><i class="fa fa-circle text-info" ></i> <font ng-class="'highlightblue'">{{bmetric.Yotta.CR}}</font> CR
+                </dd> 
+                <dd><i class="fa fa-circle text-info" ></i> <font ng-class="'highlightblue'">{{bmetric.Yotta.MTP}}</font> MTP {{bmetric.Yotta.Month}}
+                </dd>         
+             </dl> 
+            </div>
+          </div>
+        </div>
+        <div class="ui  card">
+          <div class="ui top attached blue  message">
+             <div class=" ui  blue header "><a href="#/seaquestplatformtrend"><i class="fa fa-database"></i>  SeaQuest Platform </a></div>
+          </div>
+          <div class="content">
+            <div class="description">
+              <dl>
+              <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.Sequest.Ticket}}</font>
+                Tickets in HPSM
+              </dd>
+              <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.Sequest.CloseTicket}}</font>
+                Tickets Closed in HPSM
+              </dd>
+              <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.Sequest.PDM}}</font>
+                PDMs (DEV, ITG, PRO) which includes change, breakfix MTPs
+              </dd>
+
+            </dl> 
+
+            </div>
+          </div>
+        </div>
+        <div class="ui  card">
+          <div class="ui top attached blue  message">
+             <div class=" ui  blue header "><a href="#/uamtrend"><i class="fa fa-calculator"></i>  UAM </a></div>
+          </div>
+          <div class="content">
+            <div class="description">
+              <dl>
+                  <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.UAM.Tickets}}</font> HPSM Tickets
+                  </dd> 
+                  <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.UAM.CRs}}</font> CRs
+                  </dd> 
+                  <dd><font ng-class="'highlightblue'" style="padding-left:35px;">{{bmetric.UAM.NotShared}}</font> Non-Shared Platform
+                  </dd> 
+                  <dd><font ng-class="'highlightblue'" style="padding-left:35px;">{{bmetric.UAM.BOE}}</font> BOE
+                  </dd> 
+                  <dd><font ng-class="'highlightblue'" style="padding-left:35px;">{{bmetric.UAM.QV}}</font> Qlikview
+                  </dd>  
+              </dl> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui three column cards">
+        <div class="ui card">
+            <div class="ui top attached blue  message">
+               <div class=" ui  blue header "><a href="#/dataqualitytrend"><i class="fa fa-check-square-o"></i>  Data Quality </a> </div>
+            </div>
+            <div class="content">
+              <div class="description">
+                <dl>
+                    <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.DQ.Tickets}}</font> Tickets in HPSM
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.DQ.CloseTicket}}</font> tickets closed, <font ng-class="'highlightblue'">{{bmetric.DQ.PendingTicket+bmetric.DQ.OpenTicket}}</font> tickets open
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.DQ.TicketIMIT}}</font> Tickets IMIT / <font ng-class="'highlightblue'">{{bmetric.DQ.TicketSSIT}}</font> Tickets SSIT
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="bmetric.DQ.ClosedPercentage >= 99 ?'highlightgreen': (bmetric.DQ.ClosedPercentage >= 80 ? 'highlightyellow':'highlightred')">{{bmetric.DQ.ClosedPercentage}}%</font> Closed within 22 days.
+                    </dd>
+                </dl> 
+
+              </div>
+            </div>
+        </div>            
+        <div class="ui card">
+            <div class="ui top attached blue  message">
+               <div class=" ui  blue header "><a href="#/changemanagementtrend"><i class="fa fa-retweet"></i>  Change Management </a></div>
+            </div>
+            <div class="content">
+              <div class="description">
+                  <dl>
+                      <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.CM.TTFMTPReview}}</font> MTP review meeting within T-10 and T-3.
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.CM.AVGBFX}}</font> Break-fix per Month
+                      </dd>
+                  </dl>  
+              </div>
+            </div>
+        </div>
+        <div class="ui card">
+            <div class="ui top attached blue  message">
+               <div class=" ui  blue header "><a href="#/devoncalltrend"><i class="fa fa-fax"></i> Dev On-Call </a></div>
+            </div>
+            <div class="content">
+              <div class="description">
+                  <dl>
+                      <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.DevOncall.Total}}</font> Tickets (<font ng-class="'highlightblue'">{{bmetric.DevOncall.TotalMEC}}</font> MEC / <font ng-class="'highlightblue'">{{bmetric.DevOncall.TotalNonMEC}}</font> Non-MEC)
+                      </dd>
+
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.DevOncall.TTOMEC == 100 ?'highlightgreen': (bmetric.DevOncall.TTOMEC >= 80 ? 'highlightyellow':'highlightred')">{{bmetric.DevOncall.TTOMEC}}%</font> respond within 3 minutes (TTO - MEC)
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.DevOncall.TTFMEC >= 85 ?'highlightgreen': (bmetric.DevOncall.TTFMEC >= 68 ? 'highlightyellow':'highlightred')">{{bmetric.DevOncall.TTFMEC}}%</font> error handling within 60 minutes (TTF - MEC)
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.DevOncall.TTONonMEC == 100 ?'highlightgreen': (bmetric.DevOncall.TTONonMEC >= 80 ? 'highlightyellow':'highlightred')">{{bmetric.DevOncall.TTONonMEC}}%</font> respond within 10 minutes (TTO - Non MEC)
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="bmetric.DevOncall.TTFError >= 95 ?'highlightgreen': (bmetric.DevOncall.TTFError >= 76 ? 'highlightyellow':'highlightred')">{{bmetric.DevOncall.TTFError}}%</font> error handling within 120 minutes (TTF - Non MEC)
+                      </dd>
+                  
+
+                   </dl>  
+              </div>
+            </div>
+        </div>        
+      </div>        
+      <div class="ui three column cards">
+        <div class="ui card">
+            <div class="ui top attached blue  message">
+               <div class=" ui  blue header "><a href="#/releasemanagementtrend"><i class="fa fa-users"></i> Release Management </a></div>
+            </div>
+            <div class="content">
+              <div class="description">
+                  <dl>
+                      <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.RMT.Tickets}}</font> Tickets
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.RMT.MTIRequest}}</font> MTI requests
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="'highlightblue'">{{bmetric.RMT.MTDQR}}</font> MTDQR (2 days duration)
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.RMT.TTO >= 90 ?'highlightgreen': (bmetric.RMT.TTO >= 72 ? 'highlightyellow':'highlightred')">{{bmetric.RMT.TTO}}%</font> MTI within 24 hours
+                      </dd>
+                      <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.RMT.TTF >= 90 ?'highlightgreen': (bmetric.RMT.TTF >= 72 ? 'highlightyellow':'highlightred')">{{bmetric.RMT.TTF}}%</font> error handling within 2 hours
+                      </dd>
+                  </dl> 
+
+              </div>
+            </div>
+        </div>      
+        <div class="ui card">
+          <div class="ui top attached blue  message">
+             <div class=" ui  blue header "><a href="#/edwonboardingtrend"><i class="fa fa-sliders"></i> EDW On-boarding </a></div>
+          </div>
+          <div class="content">
+            <div class="description">
+                <dl>
+                    <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.OnBoarding.FileLoadingRequest}}</font> files load requests
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.OnBoarding.FileLoad}}</font> files processed
+                    </dd>
+                     <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.OnBoarding.FileLoadSharePoint}}</font> deep support/maintenance
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.OnBoarding.Within1hours == 100 ?'highlightgreen': (bmetric.OnBoarding.Within1hours >= 80 ? 'highlightyellow':'highlightred')">{{bmetric.OnBoarding.Within1hours}}%</font> files process within 1 hours
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>  <font ng-class="bmetric.OnBoarding.Within2days == 100 ?'highlightgreen': (bmetric.OnBoarding.Within2days >= 80 ? 'highlightyellow':'highlightred')">{{bmetric.OnBoarding.Within2days}}%</font> provide solution within 2 days
+                    </dd>
+
+                </dl> 
+            </div>
+          </div>
+        </div>
+        <div class="ui card">
+          <div class="ui top attached blue  message">
+             <div class=" ui  blue header "><a href="#/edwoptimizationtrend"><i class="fa fa-newspaper-o"></i> EDW Optimization </a></div>
+          </div>
+          <div class="content">
+            <div class="description">
+                <dl>
+                    <dd><i class="fa fa-circle text-info" ></i>   <font ng-class="'highlightblue'">{{bmetric.Optimization.Tickets}}</font> Tickets 
+                    </dd>
+                    <dd><i class="fa fa-circle text-info" ></i>  Tickets by Change Type(Top 3):
+                    </dd> 
+
+                    <aa ng-repeat="test in bmetric.Optimization.topthree">
+                        <dd><font ng-class="'highlightblue'" style="padding-left:35px;">{{test.value}}</font> {{test.name}}
+                        </dd> 
+                    </aa>
+                </dl> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

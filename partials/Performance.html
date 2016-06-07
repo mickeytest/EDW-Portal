@@ -1,0 +1,122 @@
+<div id="page-wrapper" >
+  <div class="container-fluid">
+      
+
+      <div class="row">
+          <div class="col-lg-12">
+            <h1 class="page-header animated bounceInRight">Rollup Performance Status<!-- <small>Statistics Overview</small> --></h1>      
+           
+          </div>
+       </div>
+       <div class="row">&nbsp;</div> 
+
+       <div class="row">
+          <div class="col-lg-12"> 
+            <form name="myForm" class="form-horizontal pull-left animated bounceInRight" >
+             <label class="col-lg-3 control-label pull-left">Environment</label>
+              <div class="col-lg-9 pull-right" >
+                <label class="radio-inline">
+                  <input type="radio" value= "BER"  ng-model="env" >
+                  ITG           
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value= "ZEO"  ng-model="env" >
+                   ZEO
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" value= "EMR" ng-model="env" >
+                   EMR
+                </label >
+                <label class="radio-inline">
+                  <input type="radio" value= "JAD"  ng-model="env" >
+                   JAD
+                </label>
+               </div>
+            
+             </form>
+          </div>
+       </div>
+
+        <div class="row">&nbsp;</div>
+        <div class="row" >
+        <div class="col-lg-12">
+        <h3><small><p class="text-info" ><b>Performance Detailed:</b></p></small></h3>
+        <table class="table" >
+           
+          <!-- <table class="table table-bordered table-hover"  data-pagination="true"> -->
+          <!--    <thead>-->
+                <tr>
+                 <th class="col-lg-2" style="padding-right:20px; border-left: 1px solid #ccc;">Last Rollup Time:</th>
+                 <th class="col-lg-2" style="padding-right:20px; border-right: 1px solid #ccc;"></th>
+                 <th class="col-lg-2">Last Rollup Metrics:</th>
+                 <th class="col-lg-2"></th>
+                 <th class="col-lg-2"></th>
+                 <th class="col-lg-2" style="padding-right:20px; border-right: 1px solid #ccc;"></th>
+
+                </tr>
+          <!--  </thead> -->
+           <!--  <tbody> -->
+                <tr class="info" >
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Start Time:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupStartTS}} UTC</td>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Rows Accessed:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupRowAcc}}</td>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Disk IO:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupDiskIO}}</td>
+                </tr>
+                <tr>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">End Time:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupEndTS}} UTC</td>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Rows Insert/Update/Delete:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupRowIUD}}</td>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Memory Allocated (Mb):</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupMemAll}}</td>
+                </tr>
+                <tr class="info">
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Elapsed Time:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupElasped}} Hours</td>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">CPU Busy Seconds:</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupCPUBusy}}</td>
+                  <td style="padding-right:20px; border: 1px solid #ccc;">Memory Used (Mb):</td>
+                  <td class= "text-center" style="padding-right:20px; border: 1px solid #ccc;">{{LastRollupMemUsed}}</td>
+                </tr>
+
+
+         <!--   </tbody>   -->  
+          </table>   
+
+        
+        </div>
+      </div>
+
+      <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Performance Chart</h3>
+                    </div>
+                    <div  class="panel-body">
+                        <stock value='Performancechart' height="400" chartobj='chartObj'>
+                        </stock>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>  Performance Chart</h3>
+                    </div>
+                    <div  class="panel-body">
+                        
+                        <stock value='Performancechart2' height="400" chartobj='chartObj'>
+                        </stock>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+	</div>	
+</div>

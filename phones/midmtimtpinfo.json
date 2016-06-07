@@ -1,0 +1,49 @@
+{
+    "releasedate": 
+        {
+        "MTI":"Oct 12th to Oct 30th ",
+        "UAT":"Nov 2nd to Nov 25th ",
+        "SSL":"Nov 25th",
+        "ControlPeriod":"Nov 23th to Dec 4th",
+        "Frozen":"Nov 6th to Nov 15th",
+        "MTP":"Dec 9th to Dec 15th "
+    },
+    "midmtimtpinfo":[
+         {
+                "MID":"11886",
+                "EnvironmentITG":"BER",
+                "MTIDate":"2015-12-10",
+                "EnvironmentJAD":"JAD",
+                "MTPDateJAD":"2015-12-18",
+                "EnvironmentZEO":"ZEO",
+                "MTPDateZEO":"2015-12-18",
+                "EnvironmentEMR":"EMR",
+                "MTPDateEMR":"2015-12-18"
+
+            },
+            {
+                "MID":"21886",
+                "EnvironmentITG":"BER",
+                "MTIDate":"2015-12-15",
+                "EnvironmentJAD":"JAD",
+                "MTPDateJAD":"2015-12-21",
+                "EnvironmentZEO":"ZEO",
+                "MTPDateZEO":"2015-12-18",
+                "EnvironmentEMR":"EMR",
+                "MTPDateEMR":"2015-12-22"
+
+            },
+            {
+                "MID":"21823",
+                "EnvironmentITG":"BER",
+                "MTIDate":"2015-12-11",
+                "EnvironmentJAD":"JAD",
+                "MTPDateJAD":"2015-12-17",
+                "EnvironmentZEO":"ZEO",
+                "MTPDateZEO":"2015-12-17",
+                "EnvironmentEMR":"EMR",
+                "MTPDateEMR":"2015-12-18"
+
+            }
+    ] 
+}

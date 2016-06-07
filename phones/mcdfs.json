@@ -1,0 +1,222 @@
+{
+    "data": [
+        {
+            "name": "File arrived late and not loaded",
+            "y": 20,
+            "drilldown": "A"
+        },
+        {
+            "name": "File arrived on time but not loaded",
+            "y": 20,
+            "drilldown": "B"
+        },
+        {
+            "name": "File did not arrive",
+            "y": 20,
+            "drilldown": "C"
+        },
+        {
+            "name": "File included in rollup",
+            "y": 200,
+            "drilldown": "D"
+        }
+    ],
+    "drilldown": [
+        {
+            "id": "D",
+            "data": [
+                [
+                    "PPM WFM",
+                    12
+                ],
+                [
+                    "VELOCITY",
+                    1
+                ],
+                [
+                    "SCITS ID-3200",
+                    1
+                ],
+                [
+                    "Yotta",
+                    2
+                ],
+                [
+                    "PHWEB",
+                    9
+                ],
+                [
+                    "EIFFEL-EMEA",
+                    4
+                ],
+                [
+                    "SCITS ID-3200",
+                    2
+                ],
+                [
+                    "SCITS ID-5200",
+                    7
+                ],
+                [
+                    "SCITS ID-NK00",
+                    5
+                ],
+                [
+                    "Yotta",
+                    7
+                ],
+                [
+                    "SAP BW Nucleus-APJ",
+                    2
+                ]
+            ]
+        },
+        {
+            "id": "B",
+            "data": [
+                [
+                    "PPM WFM",
+                    1
+                ],
+                [
+                    "VELOCITY",
+                    1
+                ],
+                [
+                    "SCITS ID-3200",
+                    1
+                ],
+                [
+                    "Yotta",
+                    2
+                ],
+                [
+                    "PHWEB",
+                    9
+                ],
+                [
+                    "EIFFEL-EMEA",
+                    4
+                ],
+                [
+                    "SCITS ID-3200",
+                    3
+                ],
+                [
+                    "SCITS ID-5200",
+                    7
+                ],
+                [
+                    "SCITS ID-NK00",
+                    5
+                ],
+                [
+                    "Yotta",
+                    7
+                ],
+                [
+                    "SAP BW Nucleus-APJ",
+                    2
+                ]
+            ]
+        },
+        {
+            "id": "C",
+            "data": [
+                [
+                    "PPM WFM",
+                    1
+                ],
+                [
+                    "VELOCITY",
+                    1
+                ],
+                [
+                    "SCITS ID-3200",
+                    1
+                ],
+                [
+                    "Yotta",
+                    2
+                ],
+                [
+                    "PHWEB",
+                    9
+                ],
+                [
+                    "EIFFEL-EMEA",
+                    4
+                ],
+                [
+                    "SCITS ID-3200",
+                    3
+                ],
+                [
+                    "SCITS ID-5200",
+                    7
+                ],
+                [
+                    "SCITS ID-NK00",
+                    5
+                ],
+                [
+                    "Yotta",
+                    7
+                ],
+                [
+                    "SAP BW Nucleus-APJ",
+                    2
+                ]
+            ]
+        },
+        {
+            "id": "A",
+            "data": [
+                [
+                    "PPM WFM",
+                    1
+                ],
+                [
+                    "VELOCITY",
+                    1
+                ],
+                [
+                    "SCITS ID-3200",
+                    1
+                ],
+                [
+                    "Yotta",
+                    2
+                ],
+                [
+                    "PHWEB",
+                    9
+                ],
+                [
+                    "EIFFEL-EMEA",
+                    4
+                ],
+                [
+                    "SCITS ID-3200",
+                    3
+                ],
+                [
+                    "SCITS ID-5200",
+                    7
+                ],
+                [
+                    "SCITS ID-NK00",
+                    5
+                ],
+                [
+                    "Yotta",
+                    7
+                ],
+                [
+                    "SAP BW Nucleus-APJ",
+                    2
+                ]
+            ]
+        }
+    ]
+}
